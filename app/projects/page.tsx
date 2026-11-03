@@ -1,27 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Projects | Ceci Garcia",
-  description: "Selected product case studies from Ceci Garcia: CG Shield and Delivery Lens.",
+  title: "AI Portfolio | Ceci Garcia",
+  description: "Selected engineering and AI portfolio case studies by Ceci Garcia: CG Shield and Delivery Lens.",
 };
 
 const projects = [
   {
     href: "/projects/cg-shield/",
-    image: "/images/cg-shield-dashboard.webp",
-    eyebrow: "SECURITY · PRIVACY · OPERATIONS",
+    image: "/images/cg-shield-dashboard.svg",
+    eyebrow: "SECURITY ENGINEERING · OPTIONAL AI",
     title: "CG Shield",
-    summary: "A privacy-aware website traffic protection layer that starts with local analysis and keeps automated mitigations bounded and reversible.",
-    tags: ["Local-first analysis", "Cloudflare", "Optional AI review", "Privacy controls"],
+    summary: "An engineering portfolio project exploring privacy-aware traffic analysis, local-first detection, optional AI review and controlled mitigations.",
+    tags: ["Local-first analysis", "Cloudflare", "Explainable decisions", "Privacy"],
   },
   {
     href: "/projects/delivery-lens/",
-    image: "/images/delivery-lens-dashboard.webp",
-    eyebrow: "DELIVERY · EVIDENCE · AI",
+    image: "/images/delivery-lens-dashboard.svg",
+    eyebrow: "DELIVERY ANALYTICS · AI EXPLANATIONS",
     title: "Delivery Lens",
-    summary: "An evidence-grounded delivery intelligence layer for Agile software projects, built around historical snapshots and explicit uncertainty.",
+    summary: "An example of using point-in-time delivery evidence and optional AI explanations to support more informed Agile delivery conversations.",
     tags: ["Next.js", "Azure DevOps", "PostgreSQL", "Optional AI"],
   },
 ];
@@ -31,25 +31,25 @@ export default function ProjectsPage() {
     <main>
       <SiteHeader />
       <section className="section-shell mp-page-hero">
-        <span className="section-kicker">SELECTED WORK</span>
-        <h1>Products that make difficult decisions easier.</h1>
-        <p>These case studies focus on the problem, the engineering choices and why the product is useful. Source code remains private; the interface previews use illustrative, non-production data.</p>
+        <span className="section-kicker">SELECTED PORTFOLIO WORK</span>
+        <h1>Engineering &amp; applied AI projects.</h1>
+        <p>These are personal portfolio examples showing my approach to problem-solving, software design, data and responsible use of AI. They are not products being marketed for sale. The previews are illustrative and contain no private or production data.</p>
       </section>
 
       <section className="section-shell mp-project-list">
         {projects.map((project, index) => (
           <article className="mp-project-feature" key={project.title}>
-            <Link href={project.href} className="mp-feature-image">
-              <img src={project.image} alt={`Illustrative ${project.title} dashboard preview`} />
-              <span>ILLUSTRATIVE PRODUCT PREVIEW</span>
+            <Link href={project.href} className="mp-feature-image" aria-label={`Open ${project.title} portfolio case study`}>
+              <img src={project.image} alt={`Illustrative ${project.title} interface`} loading="lazy" />
+              <span>ILLUSTRATIVE INTERFACE</span>
             </Link>
             <div className="mp-feature-copy">
-              <div className="project-index">PROJECT {String(index + 1).padStart(2, "0")}</div>
+              <div className="project-index">EXAMPLE {String(index + 1).padStart(2, "0")}</div>
               <span className="section-kicker">{project.eyebrow}</span>
               <h2>{project.title}</h2>
               <p>{project.summary}</p>
               <div className="project-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-              <Link className="button primary" href={project.href}>Read case study <ArrowUpRight /></Link>
+              <Link className="cv-text-link" href={project.href}>Read portfolio case study ↗</Link>
             </div>
           </article>
         ))}

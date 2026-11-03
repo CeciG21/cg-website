@@ -1,97 +1,151 @@
 import Link from "next/link";
-import { ArrowUpRight, SiteFooter, SiteHeader } from "./components/SiteChrome";
+import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 
-const expertise = [
-  "Software architecture",
-  "Technical delivery",
-  "React & Next.js",
-  "Enterprise web platforms",
-  "APIs & integrations",
-  "Security & SSO",
-  "Agile delivery",
-  "Engineering leadership",
+const experience = [
+  {
+    period: "2025 — present",
+    title: "Technical Delivery Team Leader",
+    organisation: "University of Oxford · IT Services",
+    description: "Leading technical delivery for enterprise web platforms and applications, coordinating cross-functional engineering work and release assurance.",
+  },
+  {
+    period: "2017 — 2025",
+    title: "Senior Developer",
+    organisation: "Saïd Business School · University of Oxford",
+    description: "Engineering and modernising digital platforms, integrations, identity services and bespoke applications.",
+  },
+  {
+    period: "2011 — 2017",
+    title: "Software Developer → Technical Lead",
+    organisation: "Oxford · Zurich · Zug",
+    description: "Building web applications and digital services, with increasing technical ownership across delivery and architecture.",
+  },
+];
+
+const capabilities = [
+  { title: "Software engineering", detail: "React, Next.js, TypeScript, Node.js, APIs, SQL and enterprise web platforms." },
+  { title: "Technical delivery", detail: "Architecture, planning, release management, technical assurance and cross-functional coordination." },
+  { title: "Platforms & integration", detail: "Drupal, Salesforce, Azure DevOps, SSO, identity and systems integration." },
+  { title: "AI & applied experimentation", detail: "Exploring useful, bounded AI workflows with explicit evidence, review and privacy considerations." },
+];
+
+const projects = [
+  {
+    title: "CG Shield",
+    category: "Security engineering · Optional AI review",
+    description: "A sample of privacy-aware website traffic analysis, combining local rules, explainable decisions and optional AI-assisted review.",
+    image: "/images/cg-shield-dashboard.svg",
+    href: "/projects/cg-shield/",
+  },
+  {
+    title: "Delivery Lens",
+    category: "Delivery analytics · Evidence-grounded AI",
+    description: "An example of applying data and optional AI explanations to historical Agile delivery evidence and decision-making.",
+    image: "/images/delivery-lens-dashboard.svg",
+    href: "/projects/delivery-lens/",
+  },
 ];
 
 export default function Home() {
   return (
     <main>
       <SiteHeader />
-
-      <section className="hero section-shell" id="top">
-        <div className="hero-copy">
-          <div className="eyebrow"><span /> Software engineering · Technical delivery · Product thinking</div>
-          <h1>I build systems that teams can <em>trust.</em></h1>
-          <p className="hero-lede">
-            I&apos;m Ceci Garcia, a software engineering and technical delivery leader with 14+ years of experience turning complex requirements into secure, maintainable digital products.
+      <section className="cv-shell cv-hero" aria-labelledby="cv-name">
+        <div>
+          <p className="cv-eyebrow">Professional profile · Oxford, United Kingdom</p>
+          <h1 id="cv-name">Ceci Garcia</h1>
+          <p className="cv-role">Software Engineering &amp; Technical Delivery</p>
+          <p className="cv-lede">
+            I work at the intersection of hands-on software engineering, technical leadership and delivery. My experience spans more than 14 years of developing, modernising and supporting digital platforms, including enterprise services at the University of Oxford.
           </p>
-          <div className="hero-actions">
-            <Link className="button primary" href="/projects/">Explore selected projects <ArrowUpRight /></Link>
-            <Link className="button ghost" href="/about/">View my profile</Link>
+          <div className="cv-actions">
+            <Link className="cv-text-link" href="/about/">Experience &amp; credentials ↗</Link>
+            <Link className="cv-text-link" href="/projects/">Selected AI portfolio work ↗</Link>
           </div>
-          <div className="hero-meta"><span>Oxford, UK</span><span>Engineering leadership</span><span>Hands-on delivery</span></div>
         </div>
+        <aside className="cv-aside" aria-label="Profile at a glance">
+          <span className="cv-aside-heading">At a glance</span>
+          <dl className="cv-fact"><dt>Current role</dt><dd>Technical Delivery Team Leader<br />University of Oxford</dd></dl>
+          <dl className="cv-fact"><dt>Background</dt><dd>Software development, architecture and technical delivery</dd></dl>
+          <dl className="cv-fact"><dt>Areas of interest</dt><dd>Engineering leadership, platform modernisation and applied AI</dd></dl>
+        </aside>
+      </section>
 
-        <div className="hero-visual" aria-label="Career impact summary">
-          <div className="orbit-card main-card">
-            <span className="card-label">CURRENT FOCUS</span>
-            <h2>Engineering leadership without losing the engineering.</h2>
-            <p>Architecture, delivery, security and team systems designed to make complex work clearer and safer.</p>
-            <div className="main-card-footer"><span className="live-dot" /> University-scale digital platforms</div>
+      <section className="cv-section cv-shell" id="profile">
+        <div className="cv-section-layout">
+          <span className="cv-section-label">01 / Profile</span>
+          <div>
+            <h2 className="cv-section-title">Engineering experience, with a practical approach to leadership.</h2>
+            <p className="cv-section-intro">
+              I started as a software developer and progressed into technical leadership while staying close to implementation. My work brings together architecture, engineering, security, release coordination and the people needed to deliver dependable systems.
+            </p>
+            <Link href="/about/" className="cv-text-link">More about my background ↗</Link>
           </div>
-          <div className="orbit-card stat-card stat-one"><b>16</b><span>cross-functional colleagues coordinated</span></div>
-          <div className="orbit-card stat-card stat-two"><b>~30%</b><span>higher reported delivery velocity</span></div>
-          <div className="orbit-card stat-card stat-three"><b>~40%</b><span>fewer post-release incidents</span></div>
-          <div className="hero-grid" aria-hidden="true" />
         </div>
       </section>
 
-      <section className="trust-strip" aria-label="Core expertise">
-        <div className="ticker">
-          {expertise.map((item) => <span key={item}>{item}<i>✦</i></span>)}
+      <section className="cv-section cv-shell" id="experience">
+        <div className="cv-section-layout">
+          <span className="cv-section-label">02 / Experience</span>
+          <div>
+            <h2 className="cv-section-title">Career overview</h2>
+            <div className="cv-timeline">
+              {experience.map((item) => (
+                <article className="cv-timeline-entry" key={item.period}>
+                  <span className="cv-date">{item.period}</span>
+                  <div><h3>{item.title}</h3><span className="cv-organisation">{item.organisation}</span><p>{item.description}</p></div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="section-shell mp-home-intro">
-        <div className="section-heading split-heading">
-          <div><span className="section-number">01</span><span className="section-kicker">WHAT I BRING</span></div>
-          <h2>I lead technical delivery, modernise complex platforms, and build products that turn operational problems into usable software.</h2>
-        </div>
-        <div className="mp-home-actions">
-          <Link className="mp-link-card" href="/about/">
-            <span>PROFILE</span><h3>Experience, leadership and technical depth</h3><p>From hands-on development to university-scale technical delivery.</p><b>Read profile →</b>
-          </Link>
-          <Link className="mp-link-card dark" href="/projects/">
-            <span>SELECTED WORK</span><h3>Products built around real operational problems</h3><p>Explore CG Shield and Delivery Lens as full case studies.</p><b>View projects →</b>
-          </Link>
-        </div>
-      </section>
-
-      <section className="section-shell mp-project-teasers">
-        <div className="section-heading split-heading">
-          <div><span className="section-number">02</span><span className="section-kicker">SELECTED BUILDS</span></div>
-          <h2>Two projects that show how I think, design and build.</h2>
-        </div>
-
-        <div className="mp-teaser-grid">
-          <Link href="/projects/cg-shield/" className="mp-project-card">
-            <div className="mp-image-frame"><img src="/images/cg-shield-dashboard.webp" alt="Illustrative CG Shield dashboard preview" /></div>
-            <div className="mp-project-copy"><span>SECURITY · PRIVACY · OPERATIONS</span><h3>CG Shield</h3><p>Local-first traffic protection with bounded, reversible mitigations and optional AI review.</p><b>Open case study <ArrowUpRight /></b></div>
-          </Link>
-
-          <Link href="/projects/delivery-lens/" className="mp-project-card">
-            <div className="mp-image-frame"><img src="/images/delivery-lens-dashboard.webp" alt="Illustrative Delivery Lens dashboard preview" /></div>
-            <div className="mp-project-copy"><span>DELIVERY · EVIDENCE · AI</span><h3>Delivery Lens</h3><p>Evidence-grounded Agile delivery intelligence built around historical facts, not retrospective guesswork.</p><b>Open case study <ArrowUpRight /></b></div>
-          </Link>
+      <section className="cv-section cv-section-muted" id="expertise">
+        <div className="cv-shell cv-section-layout">
+          <span className="cv-section-label">03 / Capabilities</span>
+          <div>
+            <h2 className="cv-section-title">Technical interests &amp; capabilities</h2>
+            <div className="cv-capabilities">
+              {capabilities.map((item) => (
+                <article className="cv-capability" key={item.title}><h3>{item.title}</h3><p>{item.detail}</p></article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="section-shell contact-section">
-        <div className="contact-card">
-          <div><span className="section-kicker">LET&apos;S TALK</span><h2>Complex problem?<br />I like those.</h2></div>
-          <div className="contact-copy"><p>I&apos;m interested in engineering leadership, technical delivery, platform modernisation and product work where clear thinking matters as much as clean code.</p><div className="contact-actions"><a className="button light" href="mailto:ceci.garcia.ox@gmail.com">ceci.garcia.ox@gmail.com <ArrowUpRight /></a></div></div>
+      <section className="cv-section cv-shell" id="portfolio">
+        <div className="cv-section-layout">
+          <span className="cv-section-label">04 / AI portfolio</span>
+          <div>
+            <h2 className="cv-section-title">Selected engineering &amp; AI work</h2>
+            <p className="cv-section-intro">These are portfolio examples illustrating how I approach software design, data, operational decisions and practical uses of AI. They are not commercial product offerings.</p>
+            <div className="cv-projects">
+              {projects.map((project) => (
+                <article className="cv-project" key={project.title}>
+                  <Link href={project.href} className="cv-project-visual" aria-label={`View ${project.title} case study`}><img src={project.image} alt={`Illustrative ${project.title} dashboard`} loading="lazy" /></Link>
+                  <div className="cv-project-type">{project.category}</div>
+                  <h3>{project.title}</h3><p>{project.description}</p>
+                  <Link href={project.href} className="cv-text-link">Read portfolio case study ↗</Link>
+                  <small className="cv-project-note">Illustrative interface preview; no production or private data.</small>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
+      <section className="cv-section cv-shell" id="contact">
+        <div className="cv-contact">
+          <div>
+            <span className="cv-section-label">05 / Contact</span>
+            <h2 className="cv-section-title">Professional contact</h2>
+            <p>For professional conversations about engineering, technical delivery and collaboration, you can reach me by email.</p>
+          </div>
+          <div className="cv-contact-links"><a className="cv-text-link" href="mailto:ceci.garcia.ox@gmail.com">ceci.garcia.ox@gmail.com ↗</a></div>
+        </div>
+      </section>
       <SiteFooter />
     </main>
   );

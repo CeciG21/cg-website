@@ -11,15 +11,15 @@ export function ArrowUpRight() {
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Ceci Garcia home">
+      <Link className="brand" href="/" aria-label="Ceci Garcia — home">
         <span>CG</span><b>Ceci Garcia</b>
       </Link>
       <nav aria-label="Main navigation">
-        <Link href="/about/">About</Link>
-        <Link href="/projects/">Projects</Link>
-        <a href="mailto:ceci.garcia.ox@gmail.com">Contact</a>
+        <Link href="/about/">Profile</Link>
+        <Link href="/#experience">Experience</Link>
+        <Link href="/projects/">AI portfolio</Link>
+        <Link href="/#contact">Contact</Link>
       </nav>
-      <Link className="header-cta" href="/projects/">View my work <ArrowUpRight /></Link>
     </header>
   );
 }
@@ -28,8 +28,8 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div><span className="footer-mark">CG</span><span>Ceci Garcia · Oxford, UK</span></div>
-      <p>Software engineering · Technical delivery · Product thinking</p>
-      <a href="mailto:ceci.garcia.ox@gmail.com">Contact</a>
+      <p>Software engineering · Technical delivery · Selected AI work</p>
+      <a href="mailto:ceci.garcia.ox@gmail.com">Email</a>
     </footer>
   );
 }
