@@ -3,8 +3,8 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Delivery Lens | AI Portfolio | Ceci Garcia",
-  description: "Engineering portfolio case study: Delivery Lens, historical delivery evidence and optional AI explanations.",
+  title: "Delivery Lens | Selected Work | Ceci Garcia",
+  description: "Technical case study: historical Agile delivery analysis, evidence-led reporting and optional AI interpretation.",
 };
 
 export default function DeliveryLensPage() {
@@ -12,42 +12,54 @@ export default function DeliveryLensPage() {
     <main>
       <SiteHeader />
       <section className="section-shell mp-case-hero">
-        <Link className="mp-back" href="/projects/">← AI portfolio</Link>
-        <span className="section-kicker">ENGINEERING PORTFOLIO · DELIVERY DATA · AI</span>
+        <Link className="mp-back" href="/projects/">← Selected Work</Link>
+        <span className="section-kicker">TECHNICAL CASE STUDY · DELIVERY ANALYTICS · APPLIED AI</span>
         <h1>Delivery Lens</h1>
-        <p className="mp-case-lede">A portfolio example exploring evidence-grounded Agile delivery intelligence, using read-only Azure DevOps data, historical snapshots and optional AI-assisted explanations.</p>
-        <div className="project-tags"><span>Next.js + TypeScript</span><span>Azure DevOps</span><span>PostgreSQL</span><span>Optional AI</span></div>
+        <p className="mp-case-lede">An evidence-led approach to Agile delivery analysis. Historical snapshots, scope movement and optional AI-assisted interpretation support better-informed conversations about delivery and release readiness.</p>
+        <div className="project-tags"><span>Next.js &amp; TypeScript</span><span>Azure DevOps</span><span>PostgreSQL</span><span>Optional AI</span></div>
       </section>
       <section className="section-shell mp-screenshot-section">
         <figure className="mp-screenshot-frame">
-          <img src="/images/delivery-lens-dashboard.svg" alt="Illustrative Delivery Lens dashboard with planning baseline, scope movement, AI briefing and release evidence" />
-          <figcaption>Illustrative interface preview. No University or private delivery data is shown.</figcaption>
+          <img src="/images/delivery-lens-dashboard.svg" alt="Delivery Lens illustrative dashboard showing sprint baseline, scope movement and release evidence" />
+          <figcaption>Illustrative interface preview; no University or private delivery data.</figcaption>
         </figure>
       </section>
-      <section className="section-shell mp-case-grid">
-        <article><span className="section-kicker">THE ENGINEERING PROBLEM</span><h2>Historical delivery evidence can be difficult to reconstruct.</h2><p>Today&apos;s board state does not reliably show what was planned at sprint start, what moved afterwards, or which release signals have supporting evidence.</p></article>
-        <article><span className="section-kicker">THE APPROACH</span><h2>Reconstruct the facts before interpreting them.</h2><p>Delivery Lens explores point-in-time evidence, explicit scope movement and separated release states so dashboards and optional AI briefings can be based on the same verified snapshot.</p></article>
+      <section className="section-shell mp-case-grid" aria-label="Project overview">
+        <article>
+          <span className="section-kicker">OVERVIEW</span>
+          <h2>Delivery reporting grounded in historical evidence.</h2>
+          <p>Delivery Lens examines how a sprint changes over time rather than relying solely on the current board. Its analysis distinguishes planned work, later additions, removals and the evidence available for release decisions.</p>
+        </article>
+        <article>
+          <span className="section-kicker">ENGINEERING CHALLENGE</span>
+          <h2>Today’s board cannot explain yesterday’s plan.</h2>
+          <p>Current work-item states can obscure original commitments and subsequent scope changes. Reporting needs point-in-time data and an explicit distinction between confirmed and missing evidence.</p>
+        </article>
       </section>
-      <section className="projects-section mp-case-dark">
+      <section className="projects-section mp-case-dark" aria-labelledby="lens-how">
         <div className="section-shell">
-          <div className="section-heading split-heading"><div><span className="section-number">01</span><span className="section-kicker">ENGINEERING CONSIDERATIONS</span></div><h2>Evidence first; interpretation second.</h2></div>
+          <div className="section-heading split-heading"><div><span className="section-number">01</span><span className="section-kicker">WORKFLOW</span></div><h2 id="lens-how">How it works</h2></div>
           <div className="mp-benefit-grid">
-            <article><span>01</span><h3>Point-in-time baselines</h3><p>Historical ASOF queries help reconstruct work-item membership at the selected cutoff.</p></article>
-            <article><span>02</span><h3>Visible scope changes</h3><p>Added and removed work are separated so a stable total cannot conceal significant movement.</p></article>
-            <article><span>03</span><h3>Bounded AI explanation</h3><p>Missing evidence remains unknown. Optional AI can explain the same verified snapshot without inventing facts.</p></article>
+            <article><span>STEP 01</span><h3>Rebuild the baseline</h3><p>Use historical Azure DevOps evidence to establish which work items were in scope at the selected cutoff.</p></article>
+            <article><span>STEP 02</span><h3>Explain what changed</h3><p>Track additions, removals and delivery signals separately instead of relying on a single headline total.</p></article>
+            <article><span>STEP 03</span><h3>Interpret the evidence</h3><p>Present clear indicators and allow optional AI explanations based on the same verified snapshot, without filling gaps with guesses.</p></article>
           </div>
         </div>
       </section>
-      <section className="section-shell mp-case-details">
-        <div><span className="section-kicker">DESIGN PRINCIPLES</span><h2>What this example demonstrates</h2></div>
+      <section className="section-shell mp-case-details" aria-labelledby="lens-tech">
+        <div><span className="section-kicker">ENGINEERING</span><h2 id="lens-tech">Technical approach</h2></div>
         <div className="mp-detail-list">
-          <div><b>Historical accuracy</b><p>Represent what was true at a known cutoff instead of silently substituting current state.</p></div>
-          <div><b>Uncertainty</b><p>Show missing evidence as unknown rather than making false numeric or narrative conclusions.</p></div>
-          <div><b>Read-only integration</b><p>Read evidence from Azure DevOps without modifying the delivery source records.</p></div>
-          <div><b>AI with boundaries</b><p>Use optional AI to interpret verified evidence, not create data unsupported by the source.</p></div>
+          <div><b>Web application</b><p>Next.js and TypeScript for the interface and evidence-focused reporting workflow.</p></div>
+          <div><b>Data sources</b><p>Read-only Azure DevOps integration, with PostgreSQL for snapshot and analysis data.</p></div>
+          <div><b>Historical analysis</b><p>Point-in-time queries distinguish original sprint scope from later work-item movement.</p></div>
+          <div><b>AI boundaries</b><p>Optional AI interpretation is constrained by the available evidence; unknowns remain explicit.</p></div>
         </div>
       </section>
-      <section className="section-shell mp-next-project"><span>Another portfolio example</span><Link href="/projects/cg-shield/">CG Shield →</Link></section>
+      <section className="section-shell mp-case-grid" aria-label="Professional relevance">
+        <article><span className="section-kicker">WHY IT MATTERS</span><h2>More reliable evidence supports better delivery decisions.</h2></article>
+        <article><p>The work connects software architecture, delivery governance and applied AI. It focuses on traceable reasoning, clear uncertainty and information that teams can use to review progress without mistaking a narrative for a verified fact.</p></article>
+      </section>
+      <section className="section-shell mp-next-project"><span>Next case study</span><Link href="/projects/cg-shield/">CG Shield →</Link></section>
       <SiteFooter />
     </main>
   );

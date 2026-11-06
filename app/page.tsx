@@ -33,14 +33,14 @@ const projects = [
   {
     title: "CG Shield",
     category: "Security engineering · Optional AI review",
-    description: "A sample of privacy-aware website traffic analysis, combining local rules, explainable decisions and optional AI-assisted review.",
+    description: "Privacy-aware traffic analysis combining local rules, explainable decisions and optional AI-assisted review.",
     image: "/images/cg-shield-dashboard.svg",
     href: "/projects/cg-shield/",
   },
   {
     title: "Delivery Lens",
     category: "Delivery analytics · Evidence-grounded AI",
-    description: "An example of applying data and optional AI explanations to historical Agile delivery evidence and decision-making.",
+    description: "Point-in-time Agile delivery analysis using historical evidence and optional AI-supported interpretation.",
     image: "/images/delivery-lens-dashboard.svg",
     href: "/projects/delivery-lens/",
   },
@@ -55,12 +55,10 @@ export default function Home() {
           <p className="cv-eyebrow">Professional profile · Oxford, United Kingdom</p>
           <h1 id="cv-name">Ceci Garcia</h1>
           <p className="cv-role">Software Engineering &amp; Technical Delivery</p>
-          <p className="cv-lede">
-            I work at the intersection of hands-on software engineering, technical leadership and delivery. My experience spans more than 14 years of developing, modernising and supporting digital platforms, including enterprise services at the University of Oxford.
-          </p>
+          <p className="cv-lede">I work at the intersection of hands-on software engineering, technical leadership and delivery. My experience spans more than 14 years of developing, modernising and supporting digital platforms, including enterprise services at the University of Oxford.</p>
           <div className="cv-actions">
             <Link className="cv-text-link" href="/about/">Experience &amp; credentials ↗</Link>
-            <Link className="cv-text-link" href="/projects/">Selected AI portfolio work ↗</Link>
+            <Link className="cv-text-link" href="/projects/">Selected Work ↗</Link>
           </div>
         </div>
         <aside className="cv-aside" aria-label="Profile at a glance">
@@ -76,9 +74,7 @@ export default function Home() {
           <span className="cv-section-label">01 / Profile</span>
           <div>
             <h2 className="cv-section-title">Engineering experience, with a practical approach to leadership.</h2>
-            <p className="cv-section-intro">
-              I started as a software developer and progressed into technical leadership while staying close to implementation. My work brings together architecture, engineering, security, release coordination and the people needed to deliver dependable systems.
-            </p>
+            <p className="cv-section-intro">I started as a software developer and progressed into technical leadership while staying close to implementation. My work brings together architecture, engineering, security, release coordination and the people needed to deliver dependable systems.</p>
             <Link href="/about/" className="cv-text-link">More about my background ↗</Link>
           </div>
         </div>
@@ -117,17 +113,17 @@ export default function Home() {
 
       <section className="cv-section cv-shell" id="portfolio">
         <div className="cv-section-layout">
-          <span className="cv-section-label">04 / AI portfolio</span>
+          <span className="cv-section-label">04 / Selected Work</span>
           <div>
-            <h2 className="cv-section-title">Selected engineering &amp; AI work</h2>
-            <p className="cv-section-intro">These are portfolio examples illustrating how I approach software design, data, operational decisions and practical uses of AI. They are not commercial product offerings.</p>
+            <h2 className="cv-section-title">Selected engineering &amp; applied AI work</h2>
+            <p className="cv-section-intro">Independent projects spanning security engineering, delivery analytics and applied AI. The case studies describe the problem, technical decisions and approach to implementation. Interface previews contain illustrative, non-production data.</p>
             <div className="cv-projects">
               {projects.map((project) => (
                 <article className="cv-project" key={project.title}>
                   <Link href={project.href} className="cv-project-visual" aria-label={`View ${project.title} case study`}><img src={project.image} alt={`Illustrative ${project.title} dashboard`} loading="lazy" /></Link>
                   <div className="cv-project-type">{project.category}</div>
                   <h3>{project.title}</h3><p>{project.description}</p>
-                  <Link href={project.href} className="cv-text-link">Read portfolio case study ↗</Link>
+                  <Link href={project.href} className="cv-text-link">Read case study ↗</Link>
                   <small className="cv-project-note">Illustrative interface preview; no production or private data.</small>
                 </article>
               ))}

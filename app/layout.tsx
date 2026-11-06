@@ -6,7 +6,7 @@ import "./profile.css";
 export const metadata: Metadata = {
   title: "Ceci Garcia | Software Engineering & Technical Delivery",
   description:
-    "Ceci Garcia's professional profile: software engineering, technical leadership, enterprise digital platforms and selected AI portfolio work.",
+    "Ceci Garcia's professional profile: software engineering, technical leadership, enterprise digital platforms and selected technical work.",
   metadataBase: new URL("https://cecigarcia.uk"),
   robots: {
     index: false,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Ceci Garcia | Professional Profile",
-    description: "Software engineering, technical delivery and selected AI portfolio work.",
+    description: "Software engineering, technical delivery and selected work in applied AI.",
     url: "https://cecigarcia.uk",
     siteName: "Ceci Garcia",
     type: "website",

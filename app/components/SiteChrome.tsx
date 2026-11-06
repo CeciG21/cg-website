@@ -17,7 +17,7 @@ export function SiteHeader() {
       <nav aria-label="Main navigation">
         <Link href="/about/">Profile</Link>
         <Link href="/#experience">Experience</Link>
-        <Link href="/projects/">AI portfolio</Link>
+        <Link href="/projects/">Selected Work</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
     </header>
@@ -28,7 +28,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div><span className="footer-mark">CG</span><span>Ceci Garcia · Oxford, UK</span></div>
-      <p>Software engineering · Technical delivery · Selected AI work</p>
+      <p>Software engineering · Technical delivery · Applied AI</p>
       <a href="mailto:ceci.garcia.ox@gmail.com">Email</a>
     </footer>
   );
