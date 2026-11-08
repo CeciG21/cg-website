@@ -55,6 +55,22 @@ export default function CGShieldPage() {
           <div><b>Observability</b><p>Operator-facing visibility into recent detections, decisions and the current protection mode.</p></div>
         </div>
       </section>
+      <section className="section-shell mp-case-grid" aria-label="My contribution and implementation status">
+        <article>
+          <span className="section-kicker">MY CONTRIBUTION</span>
+          <h2>Designing a proportionate security workflow.</h2>
+          <p>I developed the concept and engineering workflow around local detection, operator oversight and narrowly scoped Cloudflare responses. The key decisions were to make AI optional, avoid unnecessary data sharing and place safeguards on automated mitigations.</p>
+        </article>
+        <article>
+          <span className="section-kicker">IMPLEMENTATION &amp; LIMITS</span>
+          <h2>A working engineering project, not a production performance claim.</h2>
+          <p>The project repository contains traffic analysis, protection modes, a dashboard and automated tests for core logic. Deployment depends on a configured traffic source and scoped Cloudflare credentials. The project is not presented as a replacement for a WAF or DDoS service, and no adoption or attack-prevention figures are claimed.</p>
+        </article>
+      </section>
+      <section className="section-shell mp-case-grid" aria-label="Lessons learnt">
+        <article><span className="section-kicker">ENGINEERING JUDGEMENT</span><h2>Keep the default simple and the interventions reversible.</h2></article>
+        <article><p>Not every suspicious request needs AI or immediate blocking. A useful system should explain what it detected, respect privacy constraints and allow operators to see or reverse temporary actions.</p></article>
+      </section>
       <section className="section-shell mp-case-grid" aria-label="Professional relevance">
         <article><span className="section-kicker">WHY IT MATTERS</span><h2>Security decisions should be useful, explainable and reversible.</h2></article>
         <article><p>The project brings together traffic analysis, privacy considerations and the practical limits of AI automation. It reflects an engineering approach that favours clear controls and operational oversight over unnecessary complexity.</p></article>
