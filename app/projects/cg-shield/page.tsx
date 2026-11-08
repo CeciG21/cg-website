@@ -9,8 +9,9 @@ export const metadata: Metadata = {
 
 export default function CGShieldPage() {
   return (
-    <main>
+    <>
       <SiteHeader />
+      <main id="main-content">
       <section className="section-shell mp-case-hero">
         <Link className="mp-back" href="/projects/">← Selected Work</Link>
         <span className="section-kicker">TECHNICAL CASE STUDY · SECURITY · APPLIED AI</span>
@@ -76,7 +77,8 @@ export default function CGShieldPage() {
         <article><p>The project brings together traffic analysis, privacy considerations and the practical limits of AI automation. It reflects an engineering approach that favours clear controls and operational oversight over unnecessary complexity.</p></article>
       </section>
       <section className="section-shell mp-next-project"><span>Next case study</span><Link href="/projects/delivery-lens/">Delivery Lens →</Link></section>
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }
