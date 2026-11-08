@@ -8,22 +8,28 @@ export const metadata: Metadata = {
 
 const experience = [
   {
-    period: "2025 — now",
+    period: "Feb 2025 — present",
     role: "Technical Delivery Team Leader",
     organisation: "University of Oxford · IT Services",
-    summary: "Lead technical delivery across enterprise web platforms and applications, coordinating a 16-person cross-functional group, line-managing four engineers and acting as Release Manager.",
+    summary: "Lead technical delivery for enterprise web platforms and applications, coordinating a 16-person cross-functional group with four direct line reports. Introduced clearer sprint goals, capacity planning and documented release readiness.",
   },
   {
-    period: "2017 — 2025",
+    period: "Feb 2017 — Feb 2025",
     role: "Senior Developer",
     organisation: "Saïd Business School · University of Oxford",
-    summary: "Led architecture, modernisation and integration across enterprise digital platforms, including Drupal, academic systems, SSO, Salesforce, Canvas and bespoke applications.",
+    summary: "Led enterprise platform modernisation and integration across Drupal, assessment systems, identity services and connected digital platforms, combining engineering with technical planning and stakeholder coordination.",
   },
   {
-    period: "2011 — 2017",
-    role: "Software Developer → Technical Lead",
-    organisation: "Oxford · Zurich · Zug",
-    summary: "Built web applications, learning platforms and digital services across PHP, JavaScript, C#/.NET, SQL and Drupal, combining hands-on engineering with technical ownership.",
+    period: "Jun 2015 — Feb 2017",
+    role: "Software Developer",
+    organisation: "Saïd Business School · University of Oxford",
+    summary: "Developed and maintained Drupal websites and online applications, coordinated technical implementation with internal and external developers, and supported platform migrations and single sign-on.",
+  },
+  {
+    period: "2011 — 2015",
+    role: "Software Developer / Technical Lead",
+    organisation: "TATA Interactive Systems · iMusician Digital · ANCYCH",
+    summary: "Delivered bespoke applications and learning systems in Switzerland, including hands-on C#/.NET, PHP, JavaScript and SQL development, quality checks and client-facing technical problem-solving.",
   },
 ];
 
@@ -34,14 +40,14 @@ export default function AboutPage() {
       <section className="section-shell mp-page-hero">
         <span className="section-kicker">ABOUT CECI</span>
         <h1>Technical leadership grounded in real engineering.</h1>
-        <p>I work where software engineering, architecture, delivery and leadership meet. I have progressed from developer to senior engineer and technical delivery leader while continuing to stay close to code, systems and technical decisions.</p>
+        <p>I work across software engineering, technical leadership, Agile delivery and applied AI. My career spans hands-on development, enterprise system modernisation, engineering collaboration and managing technical delivery, with a focus on practical, maintainable solutions.</p>
       </section>
 
       <section className="section-shell profile-section mp-profile-tight">
         <div className="profile-grid">
           <div className="profile-story">
             <p className="large-copy">At the University of Oxford I lead technical delivery across enterprise web platforms and applications, bringing together engineering, product, QA, architecture, migration and operational concerns.</p>
-            <p>Earlier, at Saïd Business School, I led platform modernisation, integrations, SSO and enterprise CMS development. I care about practical engineering: clear evidence, bounded risk, maintainable systems, useful interfaces and delivery processes that help teams make better decisions.</p>
+            <p>Earlier, at Saïd Business School, I worked on enterprise CMS modernisation, bespoke systems, integrations and SSO. I value practical engineering: sound technical decisions, maintainable systems, transparent evidence and delivery processes that help people solve problems.</p>
           </div>
           <div className="proof-grid">
             <article className="proof-card"><span>01</span><h3>Build</h3><p>React, Next.js, Node.js, TypeScript, APIs, SQL and enterprise web platforms.</p></article>
@@ -69,16 +75,16 @@ export default function AboutPage() {
           <aside className="credentials-card">
             <span className="card-label">SELECTED CREDENTIALS</span>
             <div className="credential"><b>11</b><span>active Salesforce certifications, including Application Architect and B2B Solution Architect</span></div>
-            <div className="credential"><b>CSP-SM</b><span>Certified Scrum Professional, with A-CSM and CSM</span></div>
-            <div className="credential"><b>2026</b><span>Doctorate academic requirements completed in Institutional Management and Innovation; award pending</span></div>
-            <div className="credential"><b>Oxford</b><span>Women&apos;s Leadership Development Programme, Saïd Business School</span></div>
+            <div className="credential"><b>Scrum</b><span>CSM (2019), A-CSM (2021) and CSP-SM (2022); current renewal status not independently verified</span></div>
+            <div className="credential"><b>2026</b><span>Doctorate in Institutional Management and Innovation: academic requirements completed; formal award pending</span></div>
+            <div className="credential"><b>Oxford</b><span>Women&apos;s Leadership Development Programme (2023), Saïd Business School</span></div>
           </aside>
         </div>
       </section>
 
       <section className="capabilities-section">
         <div className="section-shell capabilities-grid">
-          <div className="capability-intro"><span className="section-number">02</span><span className="section-kicker">CAPABILITIES</span><h2>Technical depth with delivery context.</h2><p>I work across the full path from idea and architecture to implementation, assurance, release and operational handover.</p></div>
+          <div className="capability-intro"><span className="section-number">02</span><span className="section-kicker">CAPABILITIES</span><h2>Technical depth with delivery context.</h2><p>My experience connects hands-on software development, technical decision-making, integration, assurance and the coordination required to deliver reliable changes.</p></div>
           <div className="capability-columns">
             <div><span>ENGINEERING</span><p>React · Next.js · JavaScript · TypeScript · Node.js · HTML/CSS · Drupal/PHP · REST APIs · SQL · Git · CI/CD</p></div>
             <div><span>PLATFORMS & DATA</span><p>PostgreSQL · MySQL · Docker · Kubernetes · Linux/Bash · Payload · Salesforce · Canvas · Azure DevOps</p></div>
