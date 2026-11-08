@@ -9,8 +9,9 @@ export const metadata: Metadata = {
 
 export default function CGQAPage() {
   return (
-    <main>
+    <>
       <SiteHeader />
+      <main id="main-content">
       <section className="section-shell mp-case-hero">
         <Link className="mp-back" href="/projects/">← Selected Work</Link>
         <span className="section-kicker">TECHNICAL CASE STUDY · QUALITY ENGINEERING · APPLIED AI</span>
@@ -77,7 +78,8 @@ export default function CGQAPage() {
         <article><p>CG QA explores repeatable engineering checks alongside practical release validation. It keeps deterministic findings, stage observations and optional AI interpretation distinct so teams can make review decisions with clearer evidence and uncertainty.</p></article>
       </section>
       <section className="section-shell mp-next-project"><span>Next case study</span><Link href="/projects/cg-shield/">CG Shield →</Link></section>
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }
