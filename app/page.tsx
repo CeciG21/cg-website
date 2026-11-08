@@ -94,8 +94,9 @@ const projects = [
 
 export default function Home() {
   return (
-    <main>
+    <>
       <SiteHeader />
+      <main id="main-content">
       <section className="cv-shell cv-hero" aria-labelledby="cv-name">
         <div>
           <p className="cv-eyebrow">Professional profile · Oxford, United Kingdom</p>
@@ -207,7 +208,8 @@ export default function Home() {
           <div className="cv-contact-links"><a className="cv-text-link" href="mailto:ceci.garcia.ox@gmail.com">ceci.garcia.ox@gmail.com ↗</a></div>
         </div>
       </section>
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }
