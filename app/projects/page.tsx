@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "Selected Work | Ceci Garcia",
-  description: "Case studies in software engineering, delivery analytics and applied AI: CG Shield and Delivery Lens.",
+  description: "Case studies in security engineering, quality engineering, delivery analytics and applied AI: CG Shield, Delivery Lens and CG QA.",
 };
 
 const projects = [
@@ -24,6 +24,14 @@ const projects = [
     summary: "An evidence-led approach to Agile delivery analysis, combining historical snapshots, explicit scope movement and optional AI interpretation to support informed decisions.",
     tags: ["Next.js", "Azure DevOps", "PostgreSQL", "AI-assisted analysis"],
   },
+  {
+    href: "/projects/cg-qa/",
+    image: "/images/cg-qa-dashboard.svg",
+    eyebrow: "QUALITY ENGINEERING · OPTIONAL AI",
+    title: "CG QA",
+    summary: "A framework-aware quality gate for GitHub branch reviews and deployed stage environments. Deterministic findings, CI evidence and Playwright smoke checks are reported separately from optional AI analysis.",
+    tags: ["GitHub compare API", "Framework-aware checks", "Playwright", "Optional AI"],
+  },
 ];
 
 export default function ProjectsPage() {
@@ -33,7 +41,7 @@ export default function ProjectsPage() {
       <section className="section-shell mp-page-hero">
         <span className="section-kicker">SELECTED WORK</span>
         <h1>Software engineering &amp; applied AI.</h1>
-        <p>Independent technical projects exploring security, delivery evidence and responsible use of AI. Each case study sets out the engineering challenge, how the system works and the choices behind its design. Interface previews use illustrative, non-production data.</p>
+        <p>Independent technical projects exploring security, quality engineering, delivery evidence and responsible use of AI. Each case study sets out the engineering challenge, how the system works and the choices behind its design. Interface previews use illustrative, non-production data.</p>
       </section>
       <section className="section-shell mp-project-list">
         {projects.map((project, index) => (

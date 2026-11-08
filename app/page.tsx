@@ -44,6 +44,13 @@ const projects = [
     image: "/images/delivery-lens-dashboard.svg",
     href: "/projects/delivery-lens/",
   },
+  {
+    title: "CG QA",
+    category: "Quality engineering · Optional AI review",
+    description: "Framework-aware GitHub code review and Playwright stage checks, with clear evidence and optional AI analysis.",
+    image: "/images/cg-qa-dashboard.svg",
+    href: "/projects/cg-qa/",
+  },
 ];
 
 export default function Home() {
@@ -116,7 +123,7 @@ export default function Home() {
           <span className="cv-section-label">04 / Selected Work</span>
           <div>
             <h2 className="cv-section-title">Selected engineering &amp; applied AI work</h2>
-            <p className="cv-section-intro">Independent projects spanning security engineering, delivery analytics and applied AI. The case studies describe the problem, technical decisions and approach to implementation. Interface previews contain illustrative, non-production data.</p>
+            <p className="cv-section-intro">Independent projects spanning security engineering, delivery analytics, quality engineering and applied AI. The case studies describe the problem, technical decisions and approach to implementation. Interface previews contain illustrative, non-production data.</p>
             <div className="cv-projects">
               {projects.map((project) => (
                 <article className="cv-project" key={project.title}>

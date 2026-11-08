@@ -59,7 +59,7 @@ export default function DeliveryLensPage() {
         <article><span className="section-kicker">WHY IT MATTERS</span><h2>More reliable evidence supports better delivery decisions.</h2></article>
         <article><p>The work connects software architecture, delivery governance and applied AI. It focuses on traceable reasoning, clear uncertainty and information that teams can use to review progress without mistaking a narrative for a verified fact.</p></article>
       </section>
-      <section className="section-shell mp-next-project"><span>Next case study</span><Link href="/projects/cg-shield/">CG Shield →</Link></section>
+      <section className="section-shell mp-next-project"><span>Next case study</span><Link href="/projects/cg-qa/">CG QA →</Link></section>
       <SiteFooter />
     </main>
   );
