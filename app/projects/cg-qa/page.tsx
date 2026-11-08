@@ -56,6 +56,22 @@ export default function CGQAPage() {
           <div><b>Optional AI</b><p>Semantic review is off by default and requires explicit configuration; enabling it sends selected diff content to the configured AI service.</p></div>
         </div>
       </section>
+      <section className="section-shell mp-case-grid" aria-label="My contribution and current status">
+        <article>
+          <span className="section-kicker">MY CONTRIBUTION</span>
+          <h2>Defining a quality gate that reports evidence, not confidence theatre.</h2>
+          <p>I shaped and developed the review workflow around meaningful branch comparisons, framework-specific checks, clear findings for developers and product owners, and stage verification that stays separate from optional AI interpretation.</p>
+        </article>
+        <article>
+          <span className="section-kicker">IMPLEMENTATION STATUS</span>
+          <h2>A working prototype with explicit test boundaries.</h2>
+          <p>The Python application implements GitHub comparison checks, deterministic review rules, browser/HTTP stage checks and locally stored reports. Optional AI review is off by default. When a verification is unavailable, the system reports NOT TESTED instead of assuming it passed. Full authenticated UAT journeys and automatic test generation remain future work.</p>
+        </article>
+      </section>
+      <section className="section-shell mp-case-grid" aria-label="Lessons learnt">
+        <article><span className="section-kicker">LESSONS LEARNT</span><h2>A clean diff, passing CI and a working page prove different things.</h2></article>
+        <article><p>Quality assurance becomes more useful when review findings, automated checks, deployed-environment observations and untested paths are kept distinct. The design favours repeatable evidence and responsible operator decisions over a single unexplained pass/fail score.</p></article>
+      </section>
       <section className="section-shell mp-case-grid" aria-label="Professional relevance">
         <article><span className="section-kicker">WHY IT MATTERS</span><h2>Quality assurance works best when the limits of a check are visible.</h2></article>
         <article><p>CG QA explores repeatable engineering checks alongside practical release validation. It keeps deterministic findings, stage observations and optional AI interpretation distinct so teams can make review decisions with clearer evidence and uncertainty.</p></article>
