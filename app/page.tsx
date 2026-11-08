@@ -3,28 +3,67 @@ import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 
 const experience = [
   {
-    period: "2025 — present",
+    period: "Feb 2025 — present",
     title: "Technical Delivery Team Leader",
     organisation: "University of Oxford · IT Services",
-    description: "Leading technical delivery for enterprise web platforms and applications, coordinating cross-functional engineering work and release assurance.",
+    description: "Lead technical delivery for enterprise web platforms and applications, including cross-functional engineering planning, quality assurance and release readiness.",
   },
   {
-    period: "2017 — 2025",
+    period: "Feb 2017 — Feb 2025",
     title: "Senior Developer",
     organisation: "Saïd Business School · University of Oxford",
-    description: "Engineering and modernising digital platforms, integrations, identity services and bespoke applications.",
+    description: "Led modernisation of enterprise systems, application development, integrations and technical improvement programmes.",
   },
   {
-    period: "2011 — 2017",
-    title: "Software Developer → Technical Lead",
-    organisation: "Oxford · Zurich · Zug",
-    description: "Building web applications and digital services, with increasing technical ownership across delivery and architecture.",
+    period: "Jun 2015 — Feb 2017",
+    title: "Software Developer",
+    organisation: "Saïd Business School · University of Oxford",
+    description: "Developed and delivered Drupal websites, online tools and integrations, working with internal and external developers.",
+  },
+  {
+    period: "2011 — 2015",
+    title: "Software Developer / Technical Lead",
+    organisation: "TATA Interactive Systems · iMusician Digital · ANCYCH",
+    description: "Hands-on development of web applications, e-learning systems and bespoke software across C#/.NET, PHP, JavaScript and SQL.",
+  },
+];
+
+const achievements = [
+  {
+    label: "People & delivery",
+    title: "Cross-functional engineering leadership",
+    description: "Coordinate a 16-person delivery group, with four direct line reports, across engineering, product, quality assurance and release planning.",
+  },
+  {
+    label: "Enterprise modernisation",
+    title: "Assessment platform rebuild",
+    description: "Led a Drupal 7-to-9 assessment-system rebuild, coordinating the roadmap, developers and testing. The transition was completed with minimal downtime and no data loss.",
+  },
+  {
+    label: "Systems simplification",
+    title: "11 platforms consolidated into two",
+    description: "Led consolidation of 11 digital platforms into two core systems, helping simplify integration, support and maintenance.",
+  },
+  {
+    label: "Applied AI",
+    title: "Making existing knowledge easier to find",
+    description: "Designed and deployed a team-facing AI assistant to help colleagues retrieve previous issues, resolutions and delivery guidance.",
+  },
+  {
+    label: "Practical automation",
+    title: "Approximately £5,000 in avoided agency costs",
+    description: "Designed and built an in-house campaign-link generator using SharePoint, Power Apps and Power Automate.",
+  },
+  {
+    label: "Individual recognition",
+    title: "Saïd Business School · 2023/24",
+    description: "Received individual recognition for consistently demonstrating exceptional performance and commitment to the School’s values.",
   },
 ];
 
 const capabilities = [
   { title: "Software engineering", detail: "React, Next.js, TypeScript, Node.js, APIs, SQL and enterprise web platforms." },
-  { title: "Technical delivery", detail: "Architecture, planning, release management, technical assurance and cross-functional coordination." },
+  { title: "Technical leadership & delivery", detail: "Engineering teams, Agile planning, release management, technical assurance and cross-functional coordination." },
   { title: "Platforms & integration", detail: "Drupal, Salesforce, Azure DevOps, SSO, identity and systems integration." },
   { title: "AI & applied experimentation", detail: "Exploring useful, bounded AI workflows with explicit evidence, review and privacy considerations." },
 ];
@@ -62,7 +101,7 @@ export default function Home() {
           <p className="cv-eyebrow">Professional profile · Oxford, United Kingdom</p>
           <h1 id="cv-name">Ceci Garcia</h1>
           <p className="cv-role">Software Engineering &amp; Technical Delivery</p>
-          <p className="cv-lede">I work at the intersection of hands-on software engineering, technical leadership and delivery. My experience spans more than 14 years of developing, modernising and supporting digital platforms, including enterprise services at the University of Oxford.</p>
+          <p className="cv-lede">I bring more than 14 years of software engineering and technical delivery experience, from hands-on development to leading complex platform change. I combine engineering judgement, systems integration and practical problem-solving with people leadership, Agile delivery and release assurance.</p>
           <div className="cv-actions">
             <Link className="cv-text-link" href="/about/">Experience &amp; credentials ↗</Link>
             <Link className="cv-text-link" href="/projects/">Selected Work ↗</Link>
@@ -71,8 +110,8 @@ export default function Home() {
         <aside className="cv-aside" aria-label="Profile at a glance">
           <span className="cv-aside-heading">At a glance</span>
           <dl className="cv-fact"><dt>Current role</dt><dd>Technical Delivery Team Leader<br />University of Oxford</dd></dl>
-          <dl className="cv-fact"><dt>Background</dt><dd>Software development, architecture and technical delivery</dd></dl>
-          <dl className="cv-fact"><dt>Areas of interest</dt><dd>Engineering leadership, platform modernisation and applied AI</dd></dl>
+          <dl className="cv-fact"><dt>Leadership scope</dt><dd>16-person delivery group · four direct reports</dd></dl>
+          <dl className="cv-fact"><dt>Focus</dt><dd>Software engineering · technical leadership · Agile delivery · applied AI</dd></dl>
         </aside>
       </section>
 
@@ -87,9 +126,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="cv-section cv-shell" id="achievements" aria-labelledby="achievements-heading">
+        <div className="cv-section-layout">
+          <span className="cv-section-label">02 / Selected Achievements</span>
+          <div>
+            <h2 className="cv-section-title" id="achievements-heading">Selected results from engineering and delivery.</h2>
+            <p className="cv-section-intro">Examples of work I have led or delivered, from enterprise modernisation to practical improvements for colleagues.</p>
+            <div className="cv-achievements">
+              {achievements.map((achievement) => (
+                <article className="cv-achievement" key={achievement.title}>
+                  <span className="cv-achievement-label">{achievement.label}</span>
+                  <h3>{achievement.title}</h3>
+                  <p>{achievement.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="cv-section cv-shell" id="experience">
         <div className="cv-section-layout">
-          <span className="cv-section-label">02 / Experience</span>
+          <span className="cv-section-label">03 / Experience</span>
           <div>
             <h2 className="cv-section-title">Career overview</h2>
             <div className="cv-timeline">
@@ -106,7 +164,7 @@ export default function Home() {
 
       <section className="cv-section cv-section-muted" id="expertise">
         <div className="cv-shell cv-section-layout">
-          <span className="cv-section-label">03 / Capabilities</span>
+          <span className="cv-section-label">04 / Capabilities</span>
           <div>
             <h2 className="cv-section-title">Technical interests &amp; capabilities</h2>
             <div className="cv-capabilities">
@@ -120,10 +178,10 @@ export default function Home() {
 
       <section className="cv-section cv-shell" id="portfolio">
         <div className="cv-section-layout">
-          <span className="cv-section-label">04 / Selected Work</span>
+          <span className="cv-section-label">05 / Selected Work</span>
           <div>
             <h2 className="cv-section-title">Selected engineering &amp; applied AI work</h2>
-            <p className="cv-section-intro">Independent projects spanning security engineering, delivery analytics, quality engineering and applied AI. The case studies describe the problem, technical decisions and approach to implementation. Interface previews contain illustrative, non-production data.</p>
+            <p className="cv-section-intro">Independent projects in security engineering, delivery analytics and software quality. Each case study explains the problem, my contribution, technical decisions and implementation boundaries. Interface previews use illustrative, non-production data.</p>
             <div className="cv-projects">
               {projects.map((project) => (
                 <article className="cv-project" key={project.title}>
@@ -142,7 +200,7 @@ export default function Home() {
       <section className="cv-section cv-shell" id="contact">
         <div className="cv-contact">
           <div>
-            <span className="cv-section-label">05 / Contact</span>
+            <span className="cv-section-label">06 / Contact</span>
             <h2 className="cv-section-title">Professional contact</h2>
             <p>For professional conversations about engineering, technical delivery and collaboration, you can reach me by email.</p>
           </div>
