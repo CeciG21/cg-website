@@ -86,6 +86,22 @@ main{overflow:visible}
 .mp-feature-copy .project-tags span,.mp-case-hero .project-tags span{background:transparent;color:var(--cv-muted)}
 .mp-next-project a,.next a{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .mp-project-card:hover,.mp-link-card:hover,.proof-card:hover{transform:none;box-shadow:none}
+
+
+/* Career evidence uses the existing editorial card language and colour palette. */
+.cv-achievements{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.cv-achievement{min-width:0;padding:22px 24px;border:1px solid var(--cv-rule);border-radius:10px;background:#fff}
+.cv-achievement-label{display:block;margin-bottom:12px;color:var(--cv-accent);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.cv-achievement h3{margin:0 0 10px;font-size:18px;font-weight:650;letter-spacing:-.02em;color:var(--cv-ink)}
+.cv-achievement p{margin:0;color:var(--cv-muted);font-size:14px;line-height:1.7}
+.cv-achievement-note{max-width:710px;margin:22px 0 0;color:var(--cv-muted);font-size:13px;line-height:1.65}
+.skip-link{position:fixed;top:12px;left:16px;z-index:100;background:#fff;color:var(--cv-ink);border:2px solid var(--cv-accent);border-radius:6px;padding:10px 14px;font-size:14px;font-weight:700;transform:translateY(-180%)}
+.skip-link:focus{transform:translateY(0)}
+/* Contrast improvements for small secondary text; no change to the theme palette. */
+.cv-project-type{color:#536a78}
+.cv-project-note{color:#536a78}
+.cv-fact dt{color:#536a78}
+@media(max-width:640px){.cv-achievements{grid-template-columns:1fr}.cv-achievement{padding:22px}}
 @media(max-width:900px){.cv-hero{gap:44px;grid-template-columns:1fr}.cv-aside{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding-left:0;border-left:none}.cv-aside-heading{grid-column:1/-1;margin-bottom:0}.cv-fact{padding:14px 0}.cv-section-layout{grid-template-columns:170px minmax(0,1fr);gap:35px}.cv-contact{align-items:flex-start;flex-direction:column}.site-header,.nav{padding-left:24px;padding-right:24px}}
 @media(max-width:640px){html{scroll-padding-top:132px}.site-header,.nav{min-height:auto;padding:13px 18px 11px;flex-direction:column;align-items:flex-start;gap:12px}.site-header .brand b,.nav .brand b{display:inline!important}.site-header nav,.nav .navlinks{display:flex!important;width:100%;flex-wrap:wrap;gap:19px;font-size:12px}.site-header .header-cta,.nav .navcta{display:none!important}.cv-shell,.section-shell,.shell,.site-footer,.footer{width:calc(100% - 36px)}.cv-hero{padding:63px 0 70px;gap:34px}.cv-hero h1{font-size:clamp(59px,15vw,78px)}.cv-role{font-size:23px}.cv-lede{font-size:16px;line-height:1.75}.cv-actions{gap:20px}.cv-aside{display:block}.cv-aside-heading{margin-bottom:0}.cv-fact{padding:13px 0}.cv-section{padding:60px 0}.cv-section-layout{grid-template-columns:1fr;gap:22px}.cv-section-title{font-size:36px}.cv-timeline-entry{grid-template-columns:1fr;gap:8px;padding:23px 0}.cv-capabilities{grid-template-columns:1fr}.cv-projects{grid-template-columns:1fr;gap:40px}.cv-project p{min-height:0}.cv-contact{gap:15px}.site-footer,.footer{align-items:flex-start;gap:12px;flex-direction:column;padding:24px 0}.site-footer p,.footer p{display:block}.mp-page-hero,.mp-case-hero{padding-top:58px}.mp-page-hero h1,.mp-case-hero h1,.pagehero h1,.casehero h1{font-size:clamp(44px,12vw,60px)}.mp-benefit-grid article{min-height:0}.mp-project-feature,.feature{gap:24px}.mp-screenshot-frame figcaption,.shot figcaption{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
