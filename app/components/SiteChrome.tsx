@@ -10,7 +10,9 @@ export function ArrowUpRight() {
 
 export function SiteHeader() {
   return (
-    <header className="site-header">
+    <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <header className="site-header">
       <Link className="brand" href="/" aria-label="Ceci Garcia — home">
         <span>CG</span><b>Ceci Garcia</b>
       </Link>
@@ -20,7 +22,8 @@ export function SiteHeader() {
         <Link href="/projects/">Selected Work</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
-    </header>
+      </header>
+    </>
   );
 }
 
