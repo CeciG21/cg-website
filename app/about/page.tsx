@@ -35,8 +35,9 @@ const experience = [
 
 export default function AboutPage() {
   return (
-    <main>
+    <>
       <SiteHeader />
+      <main id="main-content">
       <section className="section-shell mp-page-hero">
         <span className="section-kicker">ABOUT CECI</span>
         <h1>Technical leadership grounded in real engineering.</h1>
@@ -93,7 +94,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }
