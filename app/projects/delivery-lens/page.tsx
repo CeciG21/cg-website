@@ -9,8 +9,9 @@ export const metadata: Metadata = {
 
 export default function DeliveryLensPage() {
   return (
-    <main>
+    <>
       <SiteHeader />
+      <main id="main-content">
       <section className="section-shell mp-case-hero">
         <Link className="mp-back" href="/projects/">← Selected Work</Link>
         <span className="section-kicker">TECHNICAL CASE STUDY · DELIVERY ANALYTICS · APPLIED AI</span>
@@ -76,7 +77,8 @@ export default function DeliveryLensPage() {
         <article><p>The work connects software architecture, delivery governance and applied AI. It focuses on traceable reasoning, clear uncertainty and information that teams can use to review progress without mistaking a narrative for a verified fact.</p></article>
       </section>
       <section className="section-shell mp-next-project"><span>Next case study</span><Link href="/projects/cg-qa/">CG QA →</Link></section>
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }
