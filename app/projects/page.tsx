@@ -36,8 +36,9 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <main>
+    <>
       <SiteHeader />
+      <main id="main-content">
       <section className="section-shell mp-page-hero">
         <span className="section-kicker">SELECTED WORK</span>
         <h1>Software engineering &amp; applied AI.</h1>
@@ -61,7 +62,8 @@ export default function ProjectsPage() {
           </article>
         ))}
       </section>
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }
