@@ -104,4 +104,38 @@ main{overflow:visible}
 @media(max-width:640px){.cv-achievements{grid-template-columns:1fr}.cv-achievement{padding:22px}}
 @media(max-width:900px){.cv-hero{gap:44px;grid-template-columns:1fr}.cv-aside{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding-left:0;border-left:none}.cv-aside-heading{grid-column:1/-1;margin-bottom:0}.cv-fact{padding:14px 0}.cv-section-layout{grid-template-columns:170px minmax(0,1fr);gap:35px}.cv-contact{align-items:flex-start;flex-direction:column}.site-header,.nav{padding-left:24px;padding-right:24px}}
 @media(max-width:640px){html{scroll-padding-top:132px}.site-header,.nav{min-height:auto;padding:13px 18px 11px;flex-direction:column;align-items:flex-start;gap:12px}.site-header .brand b,.nav .brand b{display:inline!important}.site-header nav,.nav .navlinks{display:flex!important;width:100%;flex-wrap:wrap;gap:19px;font-size:12px}.site-header .header-cta,.nav .navcta{display:none!important}.cv-shell,.section-shell,.shell,.site-footer,.footer{width:calc(100% - 36px)}.cv-hero{padding:63px 0 70px;gap:34px}.cv-hero h1{font-size:clamp(59px,15vw,78px)}.cv-role{font-size:23px}.cv-lede{font-size:16px;line-height:1.75}.cv-actions{gap:20px}.cv-aside{display:block}.cv-aside-heading{margin-bottom:0}.cv-fact{padding:13px 0}.cv-section{padding:60px 0}.cv-section-layout{grid-template-columns:1fr;gap:22px}.cv-section-title{font-size:36px}.cv-timeline-entry{grid-template-columns:1fr;gap:8px;padding:23px 0}.cv-capabilities{grid-template-columns:1fr}.cv-projects{grid-template-columns:1fr;gap:40px}.cv-project p{min-height:0}.cv-contact{gap:15px}.site-footer,.footer{align-items:flex-start;gap:12px;flex-direction:column;padding:24px 0}.site-footer p,.footer p{display:block}.mp-page-hero,.mp-case-hero{padding-top:58px}.mp-page-hero h1,.mp-case-hero h1,.pagehero h1,.casehero h1{font-size:clamp(44px,12vw,60px)}.mp-benefit-grid article{min-height:0}.mp-project-feature,.feature{gap:24px}.mp-screenshot-frame figcaption,.shot figcaption{font-size:10px}}
+
+
+/* Credentials catalogue – matching the existing editorial profile theme. */
+.credentials-hero{padding-bottom:70px}
+.credentials-hero-actions{margin-top:24px}
+.credentials-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.credentials-jump a{display:inline-block;padding:9px 13px;border:1px solid var(--cv-rule);border-radius:6px;color:var(--cv-accent);font-size:12px;font-weight:650;background:#fff}
+.credentials-jump a:hover{border-color:#8ca8b5}
+.credentials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.credentials-card{min-width:0;display:flex;flex-direction:column;gap:10px;padding:22px 24px;border:1px solid var(--cv-rule);border-radius:10px;background:#fff}
+.credentials-card-type{color:var(--cv-accent);text-transform:uppercase;letter-spacing:.08em;font-size:10px;font-weight:700}
+.credentials-card h3{margin:0;color:var(--cv-ink);font-size:17px;font-weight:650;line-height:1.45;letter-spacing:-.02em;overflow-wrap:anywhere}
+.credentials-date{display:block;color:var(--cv-muted);font-size:12px;font-weight:550;white-space:nowrap}
+.credentials-provider-note{margin-top:25px;padding:25px 28px;background:var(--cv-tint);border:1px solid var(--cv-rule);border-radius:10px}
+.credentials-provider-note p{margin:0 0 18px;color:var(--cv-muted);font-size:14px;line-height:1.75}
+.credentials-provider-note strong{color:var(--cv-ink)}
+.credentials-records{border-top:1px solid var(--cv-rule)}
+.credentials-record{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:20px 0;border-bottom:1px solid var(--cv-rule)}
+.credentials-record h3{margin:0 0 7px;font-size:16px;font-weight:650;line-height:1.5;color:var(--cv-ink)}
+.credentials-record div>span{font-size:12px;color:var(--cv-muted)}
+.credentials-record .credentials-date{padding-top:3px}
+.credentials-archive{border-top:1px solid var(--cv-rule)}
+.credentials-archive details{border-bottom:1px solid var(--cv-rule)}
+.credentials-archive summary{display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;padding:20px 2px;color:var(--cv-ink);font-size:17px;font-weight:650}
+.credentials-archive summary::marker{color:var(--cv-accent)}
+.credentials-archive summary small{color:var(--cv-muted);font-size:12px;font-weight:500;text-align:right}
+.credentials-archive summary:hover{color:var(--cv-accent)}
+.credentials-archive summary:focus-visible{outline:2px solid var(--cv-accent);outline-offset:4px}
+.credentials-archive ul{list-style:none;margin:0;padding:0 0 17px}
+.credentials-archive li{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--cv-rule);font-size:13px;line-height:1.55;color:var(--cv-ink)}
+.credentials-archive li small{white-space:nowrap;color:var(--cv-muted);font-size:11px}
+.credentials-source-note{max-width:760px;margin:22px 0;color:var(--cv-muted);font-size:13px;line-height:1.7}
+@media(max-width:640px){.credentials-hero{padding-bottom:45px}.credentials-grid{grid-template-columns:1fr}.credentials-card{padding:20px}.credentials-record{gap:12px}.credentials-archive summary{align-items:flex-start;flex-direction:column;gap:5px}.credentials-archive summary small{text-align:left}.credentials-archive li{flex-direction:column;gap:4px}.credentials-jump{gap:8px}}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
