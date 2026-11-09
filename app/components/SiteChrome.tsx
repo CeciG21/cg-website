@@ -20,6 +20,7 @@ export function SiteHeader() {
         <Link href="/about/">Profile</Link>
         <Link href="/#experience">Experience</Link>
         <Link href="/projects/">Selected Work</Link>
+        <Link href="/credentials/">Credentials</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
       </header>
