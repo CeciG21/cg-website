@@ -6,7 +6,7 @@ const experience = [
     period: "Feb 2025 — present",
     title: "Technical Delivery Team Leader",
     organisation: "University of Oxford · IT Services",
-    description: "Lead technical delivery for enterprise web platforms and applications, including cross-functional engineering planning, quality assurance and release readiness.",
+    description: "Lead technical delivery across two enterprise platforms, line-manage four engineers and coordinate Scrum development with Kanban-managed analysis, UX, architecture and migration. Strengthened sprint goals, capacity planning, Azure DevOps backlogs, delivery reporting and release readiness.",
   },
   {
     period: "Feb 2017 — Feb 2025",
@@ -102,7 +102,7 @@ export default function Home() {
           <p className="cv-eyebrow">Professional profile · Oxford, United Kingdom</p>
           <h1 id="cv-name">Ceci Garcia</h1>
           <p className="cv-role">Software Engineering &amp; Technical Delivery</p>
-          <p className="cv-lede">I bring more than 14 years of software engineering and technical delivery experience, from hands-on development to leading complex platform change. I combine engineering judgement, systems integration and practical problem-solving with people leadership, Agile delivery and release assurance.</p>
+          <p className="cv-lede">Technical delivery and software engineering leader with over 14 years&apos; experience developing and modernising enterprise web platforms and integrated systems. I combine hands-on engineering expertise with Agile delivery, stakeholder management, technical assurance and applied AI, focusing on reliable, cost-effective solutions.</p>
           <div className="cv-actions">
             <Link className="cv-text-link" href="/about/">Experience &amp; credentials ↗</Link>
             <Link className="cv-text-link" href="/projects/">Selected Work ↗</Link>
@@ -121,7 +121,7 @@ export default function Home() {
           <span className="cv-section-label">01 / Profile</span>
           <div>
             <h2 className="cv-section-title">Engineering experience, with a practical approach to leadership.</h2>
-            <p className="cv-section-intro">I started as a software developer and progressed into technical leadership while staying close to implementation. My work brings together architecture, engineering, security, release coordination and the people needed to deliver dependable systems.</p>
+            <p className="cv-section-intro">I progressed from hands-on software development into technical delivery leadership at the University of Oxford. I now line-manage four engineers and coordinate cross-functional work across enterprise platforms, engineering, analysis, UX, architecture and migration. My approach brings together systems integration, Scrum and Kanban delivery, technical assurance and practical, cost-effective problem-solving.</p>
             <Link href="/about/" className="cv-text-link">More about my background ↗</Link>
           </div>
         </div>
