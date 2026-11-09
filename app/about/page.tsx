@@ -79,6 +79,7 @@ export default function AboutPage() {
             <div className="credential"><b>Scrum</b><span>CSM (2019), A-CSM (2021) and CSP-SM (2022); current renewal status not independently verified</span></div>
             <div className="credential"><b>2026</b><span>Doctorate in Institutional Management and Innovation: academic requirements completed; formal award pending</span></div>
             <div className="credential"><b>Oxford</b><span>Women&apos;s Leadership Development Programme (2023), Saïd Business School</span></div>
+            <a className="cv-text-link" href="/credentials/">View all certifications &amp; courses ↗</a>
           </aside>
         </div>
       </section>
