@@ -11,7 +11,7 @@ const experience = [
     period: "Feb 2025 — present",
     role: "Technical Delivery Team Leader",
     organisation: "University of Oxford · IT Services",
-    summary: "Lead technical delivery for enterprise web platforms and applications, coordinating a 16-person cross-functional group with four direct line reports. Introduced clearer sprint goals, capacity planning and documented release readiness.",
+    summary: "Lead technical delivery across two enterprise platforms and line-manage four engineers. As Scrum Master, coordinate development sprints and Kanban-managed analysis, UX, architecture and migration; improve planning, capacity management, Azure DevOps backlogs and delivery reporting. Introduced documented release plans and go/no-go reviews, oversee security and supplier assurance, and designed an AI triage assistant using ChatGPT and Azure DevOps APIs. Contributed to approximately 30% higher delivery velocity and 40% fewer post-release incidents.",
   },
   {
     period: "Feb 2017 — Feb 2025",
@@ -41,14 +41,14 @@ export default function AboutPage() {
       <section className="section-shell mp-page-hero">
         <span className="section-kicker">ABOUT CECI</span>
         <h1>Technical leadership grounded in real engineering.</h1>
-        <p>I work across software engineering, technical leadership, Agile delivery and applied AI. My career spans hands-on development, enterprise system modernisation, engineering collaboration and managing technical delivery, with a focus on practical, maintainable solutions.</p>
+        <p>I am a technical delivery and software engineering leader with more than 14 years&apos; experience developing and modernising enterprise web platforms and integrated systems. My work combines hands-on engineering knowledge with Agile delivery, stakeholder management, technical assurance and AI innovation to deliver reliable, cost-effective solutions.</p>
       </section>
 
       <section className="section-shell profile-section mp-profile-tight">
         <div className="profile-grid">
           <div className="profile-story">
-            <p className="large-copy">At the University of Oxford I lead technical delivery across enterprise web platforms and applications, bringing together engineering, product, QA, architecture, migration and operational concerns.</p>
-            <p>Earlier, at Saïd Business School, I worked on enterprise CMS modernisation, bespoke systems, integrations and SSO. I value practical engineering: sound technical decisions, maintainable systems, transparent evidence and delivery processes that help people solve problems.</p>
+            <p className="large-copy">At the University of Oxford I lead technical delivery across two enterprise platforms, line-manage four engineers and coordinate development work with analysis, UX, architecture and migration teams. I set delivery priorities, balance engineering capacity and support colleagues through coaching and collaborative problem-solving.</p>
+            <p>My background spans enterprise CMS modernisation, software architecture and systems integration. In my current role, I work across Scrum and Kanban delivery, release readiness, security assurance and stakeholder communication, using clear evidence and practical engineering judgement to manage risk and improve delivery.</p>
           </div>
           <div className="proof-grid">
             <article className="proof-card"><span>01</span><h3>Build</h3><p>React, Next.js, Node.js, TypeScript, APIs, SQL and enterprise web platforms.</p></article>
