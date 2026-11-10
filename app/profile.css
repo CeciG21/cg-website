@@ -114,6 +114,12 @@ main{overflow:visible}
 .credentials-jump a:hover{border-color:#8ca8b5}
 .credentials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .credentials-card{min-width:0;display:flex;flex-direction:column;gap:10px;padding:22px 24px;border:1px solid var(--cv-rule);border-radius:10px;background:#fff}
+.credentials-badge-link{display:inline-flex;align-items:center;justify-content:flex-start;width:fit-content;min-height:142px;border-radius:8px}
+.credentials-badge-link img{display:block;width:140px;height:auto;max-height:140px;object-fit:contain}
+.credentials-badge-link:hover img{transform:translateY(-2px);transition:transform 160ms ease}
+.credentials-card-note{display:block;color:var(--cv-muted);font-size:11px;line-height:1.6}
+@media(max-width:640px){.credentials-badge-link{min-height:124px}.credentials-badge-link img{width:122px;max-height:122px}}
+
 .credentials-card-type{color:var(--cv-accent);text-transform:uppercase;letter-spacing:.08em;font-size:10px;font-weight:700}
 .credentials-card h3{margin:0;color:var(--cv-ink);font-size:17px;font-weight:650;line-height:1.45;letter-spacing:-.02em;overflow-wrap:anywhere}
 .credentials-date{display:block;color:var(--cv-muted);font-size:12px;font-weight:550;white-space:nowrap}
