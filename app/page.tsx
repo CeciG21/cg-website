@@ -90,6 +90,13 @@ const projects = [
     image: "/images/cg-qa-dashboard.svg",
     href: "/projects/cg-qa/",
   },
+  {
+    title: "AI Delivery Triage Assistant",
+    category: "Delivery operations · Applied AI",
+    description: "A practical GPT assistant that helps teams locate candidate parent features, related tickets, appropriate boards and knowledge guidance.",
+    image: "/images/ai-delivery-triage-demo.svg",
+    href: "/projects/ai-delivery-triage/",
+  },
 ];
 
 export default function Home() {
@@ -182,7 +189,7 @@ export default function Home() {
           <span className="cv-section-label">05 / Selected Work</span>
           <div>
             <h2 className="cv-section-title">Selected engineering &amp; applied AI work</h2>
-            <p className="cv-section-intro">Independent projects in security engineering, delivery analytics and software quality. Each case study explains the problem, my contribution, technical decisions and implementation boundaries. Interface previews use illustrative, non-production data.</p>
+            <p className="cv-section-intro">Selected engineering projects and a practical team-facing AI assistant, spanning security, delivery analytics, quality and work-item triage. Each case study explains the problem, my contribution and implementation boundaries. Interface previews use fictional or illustrative data.</p>
             <div className="cv-projects">
               {projects.map((project) => (
                 <article className="cv-project" key={project.title}>
