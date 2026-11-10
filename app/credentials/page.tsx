@@ -14,47 +14,58 @@ const trailblazerProfile = "https://www.salesforce.com/trailblazer/ceci-garcia";
 const salesforceCertifications = [
   {
     "title": "Salesforce Certified B2B Solution Architect",
-    "date": "Jun 2025"
+    "date": "Jun 2025",
+    "logo": "/images/salesforce-certifications/b2b-solution-architect.png"
   },
   {
     "title": "Salesforce Certified AI Associate",
-    "date": "Jan 2025"
+    "date": "Jan 2025",
+    "logo": "/images/salesforce-certifications/ai-associate.png"
   },
   {
     "title": "Salesforce Certified Data Cloud Consultant",
-    "date": "Mar 2025"
+    "date": "Mar 2025",
+    "logo": "/images/salesforce-certifications/data-360-consultant.png"
   },
   {
     "title": "Salesforce Certified Education Cloud Consultant",
-    "date": "Apr 2025"
+    "date": "Apr 2025",
+    "logo": "/images/salesforce-certifications/education-cloud-consultant.png"
   },
   {
     "title": "Salesforce Certified Platform Administrator",
-    "date": "Mar 2025"
+    "date": "Mar 2025",
+    "logo": "/images/salesforce-certifications/platform-administrator.png"
   },
   {
     "title": "Salesforce Certified Platform App Builder",
-    "date": "Jun 2025"
+    "date": "Jun 2025",
+    "logo": "/images/salesforce-certifications/platform-app-builder.png"
   },
   {
     "title": "Salesforce Certified Platform Developer",
-    "date": "May 2025"
+    "date": "May 2025",
+    "logo": "/images/salesforce-certifications/platform-developer-i.png"
   },
   {
     "title": "Salesforce Certified Platform Data Architect",
-    "date": "Apr 2025"
+    "date": "Apr 2025",
+    "logo": "/images/salesforce-certifications/platform-data-architect.png"
   },
   {
     "title": "Salesforce Certified Platform Identity and Access Management Architect",
-    "date": "Jun 2025"
+    "date": "Jun 2025",
+    "logo": "/images/salesforce-certifications/platform-identity-and-access-management-architect.png"
   },
   {
     "title": "Salesforce Certified Platform Sharing and Visibility Architect",
-    "date": "Apr 2025"
+    "date": "Apr 2025",
+    "logo": "/images/salesforce-certifications/platform-sharing-and-visibility-architect.png"
   },
   {
     "title": "Salesforce Certified Application Architect",
-    "date": "Jun 2025"
+    "date": "Jun 2025",
+    "logo": "/images/salesforce-certifications/application-architect.png"
   }
 ];
 const scrumCertifications = [
@@ -352,14 +363,19 @@ export default function CredentialsPage() {
               <div className="credentials-grid">
                 {salesforceCertifications.map((credential) => (
                   <article className="credentials-card" key={credential.title}>
+                    <a className="credentials-badge-link" href={credential.logo} target="_blank" rel="noopener noreferrer" aria-label={`View full-size badge artwork for ${credential.title}`}>
+                      <img src={credential.logo} alt={`Official Salesforce badge artwork for ${credential.title}`} width={140} height={137} loading="lazy" />
+                    </a>
                     <span className="credentials-card-type">Salesforce · Certification</span>
                     <h3>{credential.title}</h3>
                     <span className="credentials-date">{credential.date}</span>
+                    {credential.title === "Salesforce Certified AI Associate" && <span className="credentials-card-note">Supplied badge artwork is marked retired.</span>}
+                    {credential.title === "Salesforce Certified Data Cloud Consultant" && <span className="credentials-card-note">Badge artwork uses the newer Data 360 branding.</span>}
                   </article>
                 ))}
               </div>
               <div className="credentials-provider-note">
-                <p><strong>Official record and badges.</strong> Visit my Salesforce Trailblazer profile to see any publicly shared certifications, Trailhead badges and superbadges. The individual certificate PDFs are distributed by Salesforce to the certificate holder; this page does not claim to host or verify those files.</p>
+                <p><strong>Badge artwork and verification.</strong> Select any badge above to view the high-resolution Salesforce logo. These images represent certificate designs, not individual verification records. Visit my Trailblazer profile to check publicly shared certifications and earned badges; this website does not host personal Salesforce certificate PDFs.</p>
                 <a className="cv-text-link" href={trailblazerProfile} target="_blank" rel="noopener noreferrer">Open Salesforce Trailblazer profile ↗</a>
               </div>
             </div>
