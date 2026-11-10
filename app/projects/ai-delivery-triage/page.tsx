@@ -39,10 +39,6 @@ export default function AIDeliveryTriagePage() {
               width={1600}
               height={1000}
             />
-            <figcaption>
-              Illustrative workflow with fictional teams, item IDs and guidance.
-              Not a screenshot of the internal assistant or its data.
-            </figcaption>
           </figure>
         </section>
 
