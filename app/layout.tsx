@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./multipage.css";
 import "./profile.css";
+import "./portrait.css";
 
 export const metadata: Metadata = {
   title: "Ceci Garcia | Software Engineering & Technical Delivery",

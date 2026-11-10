@@ -116,6 +116,10 @@ export default function Home() {
           </div>
         </div>
         <aside className="cv-aside" aria-label="Profile at a glance">
+          <figure className="cv-portrait">
+            <img src="/images/ceci-profile.webp" alt="Portrait of Ceci Garcia" width={280} height={350} decoding="async" fetchPriority="high" />
+            <figcaption>Ceci Garcia · Software Engineering &amp; Technical Delivery</figcaption>
+          </figure>
           <span className="cv-aside-heading">At a glance</span>
           <dl className="cv-fact"><dt>Current role</dt><dd>Technical Delivery Team Leader<br />University of Oxford</dd></dl>
           <dl className="cv-fact"><dt>Leadership scope</dt><dd>16-person delivery group · four direct reports</dd></dl>
