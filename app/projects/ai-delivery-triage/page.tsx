@@ -35,9 +35,9 @@ export default function AIDeliveryTriagePage() {
           <figure className="mp-screenshot-frame">
             <img
               src="/images/ai-delivery-triage-demo.svg"
-              alt="Fictional AI triage example suggesting a board, a possible parent feature, related tickets and a relevant knowledge article"
-              width={1440}
-              height={900}
+              alt="Illustrative desktop and mobile chat with a delivery triage assistant recommending a board, candidate parent feature, related items and knowledge guidance"
+              width={1600}
+              height={1000}
             />
             <figcaption>
               Illustrative workflow with fictional teams, item IDs and guidance.
