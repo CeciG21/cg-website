@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "Selected Work | Ceci Garcia",
-  description: "Case studies in security engineering, quality engineering, delivery analytics and applied AI: CG Shield, Delivery Lens and CG QA.",
+  description: "Case studies in software security, delivery analytics, quality engineering and practical AI-assisted delivery triage.",
 };
 
 const projects = [
@@ -32,6 +32,14 @@ const projects = [
     summary: "A framework-aware quality gate for GitHub branch reviews and deployed stage environments. Deterministic findings, CI evidence and Playwright smoke checks are reported separately from optional AI analysis.",
     tags: ["GitHub compare API", "Framework-aware checks", "Playwright", "Optional AI"],
   },
+  {
+    href: "/projects/ai-delivery-triage/",
+    image: "/images/ai-delivery-triage-demo.svg",
+    eyebrow: "DELIVERY OPERATIONS · APPLIED AI",
+    title: "AI Delivery Triage Assistant",
+    summary: "A team-facing GPT assistant that helps identify candidate parent epics or features, find potentially related work, navigate boards and retrieve knowledge guidance. Shown with fictional work items.",
+    tags: ["Custom GPT", "Azure DevOps APIs", "Knowledge discovery", "Human-reviewed triage"],
+  },
 ];
 
 export default function ProjectsPage() {
@@ -42,7 +50,7 @@ export default function ProjectsPage() {
       <section className="section-shell mp-page-hero">
         <span className="section-kicker">SELECTED WORK</span>
         <h1>Software engineering &amp; applied AI.</h1>
-        <p>Independent technical projects exploring security, quality engineering, delivery evidence and responsible use of AI. Each case study sets out the engineering challenge, how the system works and the choices behind its design. Interface previews use illustrative, non-production data.</p>
+        <p>Selected technical projects and a team-facing delivery assistant, covering security, quality engineering, delivery evidence and responsible use of AI. Each case study explains the challenge, approach and design choices. Interface previews use illustrative, non-production data.</p>
       </section>
       <section className="section-shell mp-project-list">
         {projects.map((project, index) => (
