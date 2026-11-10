@@ -77,7 +77,7 @@ export default function AIDeliveryTriagePage() {
               </div>
               <h2 id="triage-flow">Four useful questions, one place to start.</h2>
             </div>
-            <div className="mp-benefit-grid">
+            <div className="mp-benefit-grid triage-benefit-grid">
               <article>
                 <span>01 / PARENTS</span>
                 <h3>Where does this work belong?</h3>
@@ -92,6 +92,11 @@ export default function AIDeliveryTriagePage() {
                 <span>03 / ROUTING</span>
                 <h3>Which board should receive it?</h3>
                 <p>Help colleagues navigate different workstreams and identify a suitable board.</p>
+              </article>
+              <article>
+                <span>04 / KNOWLEDGE</span>
+                <h3>What guidance already exists?</h3>
+                <p>Search relevant wiki articles, past issues and recorded resolutions.</p>
               </article>
             </div>
           </div>
