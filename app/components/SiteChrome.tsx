@@ -1,4 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navigation = [
+  { label: "Profile", href: "/about/" },
+  { label: "Experience", href: "/experience/" },
+  { label: "Selected Work", href: "/projects/" },
+  { label: "Credentials", href: "/credentials/" },
+  { label: "Contact", href: "/contact/" },
+];
 
 export function ArrowUpRight() {
   return (
@@ -9,20 +20,22 @@ export function ArrowUpRight() {
 }
 
 export function SiteHeader() {
+  const pathname = usePathname().replace(/\/$/, "") || "/";
+
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="site-header">
-      <Link className="brand" href="/" aria-label="Ceci Garcia — home">
-        <span>CG</span><b>Ceci Garcia</b>
-      </Link>
-      <nav aria-label="Main navigation">
-        <Link href="/about/">Profile</Link>
-        <Link href="/#experience">Experience</Link>
-        <Link href="/projects/">Selected Work</Link>
-        <Link href="/credentials/">Credentials</Link>
-        <Link href="/#contact">Contact</Link>
-      </nav>
+        <Link className="brand" href="/" aria-label="Ceci Garcia — home">
+          <span>CG</span><b>Ceci Garcia</b>
+        </Link>
+        <nav aria-label="Main navigation">
+          {navigation.map(({ label, href }) => {
+            const route = href.replace(/\/$/, "");
+            const active = pathname === route || (route === "/projects" && pathname.startsWith("/projects/"));
+            return <Link href={href} key={href} aria-current={active ? "page" : undefined}>{label}</Link>;
+          })}
+        </nav>
       </header>
     </>
   );

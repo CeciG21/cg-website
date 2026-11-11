@@ -3,6 +3,7 @@ import "./globals.css";
 import "./multipage.css";
 import "./profile.css";
 import "./portrait.css";
+import "./route-pages.css";
 
 export const metadata: Metadata = {
   title: "Ceci Garcia | Software Engineering & Technical Delivery",
