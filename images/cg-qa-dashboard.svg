@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">CG QA dashboard illustration</title>
+  <desc id="desc">Illustrative CG QA quality dashboard with a GitHub branch review, stage verification, check results and report status. No live repository or environment data is shown.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#091118"/><stop offset="1" stop-color="#121d26"/></linearGradient>
+    <style>
+      .text{font-family:Arial,Helvetica,sans-serif;fill:#f0f5f6}.muted{font-family:Arial,Helvetica,sans-serif;fill:#97aab5}.accent{font-family:Arial,Helvetica,sans-serif;fill:#beff7b}.warm{font-family:Arial,Helvetica,sans-serif;fill:#ffd89a}.strong{font-weight:700}.small{font-size:12px}.normal{font-size:14px}.mid{font-size:17px}.large{font-size:27px}.panel{fill:#151f29;stroke:#30424f;stroke-width:1.2}.rule{stroke:#30424f;stroke-width:1}
+    </style>
+  </defs>
+  <rect width="1200" height="750" fill="url(#background)"/>
+  <rect width="180" height="750" fill="#0b141e"/>
+  <rect x="18" y="25" width="31" height="31" rx="8" fill="#213623" stroke="#9de765" stroke-width="2"/>
+  <path d="M26 39l6 6 10-13" fill="none" stroke="#beff7b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="59" y="46" class="text mid strong">CG QA</text>
+  <text x="22" y="85" class="muted small">QUALITY CONTROL CENTRE</text>
+  <rect x="12" y="108" width="156" height="42" rx="10" fill="#233823" stroke="#5a7846"/>
+  <text x="30" y="135" class="accent normal strong">Overview</text>
+  <text x="30" y="184" class="muted normal">Branch review</text>
+  <text x="30" y="229" class="muted normal">Stage verification</text>
+  <text x="30" y="274" class="muted normal">Reports</text>
+  <text x="30" y="319" class="muted normal">Settings</text>
+  <line x1="18" y1="676" x2="160" y2="676" class="rule"/>
+  <text x="22" y="700" class="muted small">Illustrative interface</text>
+  <text x="22" y="720" class="accent small">No live data</text>
+  <rect x="180" y="0" width="1020" height="88" fill="#0e1720"/>
+  <rect x="203" y="23" width="4" height="40" rx="2" fill="#beff7b"/>
+  <text x="221" y="43" class="text large strong">Quality overview</text>
+  <text x="221" y="64" class="muted small">Branch review, checks and stage verification</text>
+  <rect x="989" y="26" width="186" height="34" rx="17" fill="#223328" stroke="#557950"/>
+  <circle cx="1010" cy="43" r="5" fill="#beff7b"/>
+  <text x="1023" y="47" class="accent small strong">ILLUSTRATIVE DEMO</text>
+  <rect class="panel" x="203" y="109" width="304" height="91" rx="12"/>
+  <text x="221" y="134" class="muted small strong">REVIEW TARGET</text>
+  <text x="221" y="162" class="text mid strong">sample / web-app</text>
+  <text x="221" y="182" class="muted small">feature/example → main</text>
+  <rect class="panel" x="521" y="109" width="303" height="91" rx="12"/>
+  <text x="539" y="134" class="muted small strong">FRAMEWORK SIGNAL</text>
+  <text x="539" y="163" class="text mid strong">Next.js</text>
+  <text x="539" y="182" class="muted small">Rules selected from project evidence</text>
+  <rect class="panel" x="838" y="109" width="337" height="91" rx="12"/>
+  <text x="856" y="134" class="muted small strong">EXAMPLE REPORT</text>
+  <text x="856" y="162" class="warm mid strong">PASS WITH COMMENTS</text>
+  <text x="856" y="182" class="muted small">Not a live quality decision</text>
+  <rect class="panel" x="203" y="216" width="621" height="231" rx="13"/>
+  <text x="223" y="245" class="text mid strong">Branch code review</text>
+  <text x="223" y="265" class="muted small">Deterministic review &amp; CI evidence · example only</text>
+  <line x1="223" y1="283" x2="803" y2="283" class="rule"/>
+  <text x="228" y="304" class="muted small strong">CHECK</text>
+  <text x="634" y="304" class="muted small strong">EXAMPLE STATUS</text>
+  <line x1="223" y1="315" x2="803" y2="315" class="rule"/>
+  <circle cx="232" cy="340" r="5" fill="#b6f878"/>
+  <text x="246" y="345" class="text normal">Security &amp; dependency rules</text>
+  <rect x="666" y="327" width="124" height="26" rx="13" fill="#253927"/>
+  <text x="684" y="344" class="accent small strong">PASS</text>
+  <line x1="223" y1="366" x2="803" y2="366" class="rule"/>
+  <circle cx="232" cy="388" r="5" fill="#ffca75"/>
+  <text x="246" y="393" class="text normal">Maintainability feedback</text>
+  <rect x="666" y="375" width="124" height="26" rx="13" fill="#393024"/>
+  <text x="684" y="392" class="warm small strong">COMMENTS</text>
+  <line x1="223" y1="411" x2="803" y2="411" class="rule"/>
+  <text x="228" y="432" class="muted small">CI checks displayed separately from code findings</text>
+  <rect class="panel" x="838" y="216" width="337" height="231" rx="13"/>
+  <text x="858" y="245" class="text mid strong">Stage verification</text>
+  <text x="858" y="265" class="muted small">HTTP + Playwright smoke tests</text>
+  <line x1="858" y1="283" x2="1155" y2="283" class="rule"/>
+  <circle cx="868" cy="308" r="5" fill="#b6f878"/>
+  <text x="883" y="313" class="text normal">Page reachable</text>
+  <text x="1103" y="313" class="accent small strong">PASS</text>
+  <line x1="858" y1="329" x2="1155" y2="329" class="rule"/>
+  <circle cx="868" cy="354" r="5" fill="#b6f878"/>
+  <text x="883" y="359" class="text normal">Title &amp; heading</text>
+  <text x="1103" y="359" class="accent small strong">PASS</text>
+  <line x1="858" y1="375" x2="1155" y2="375" class="rule"/>
+  <circle cx="868" cy="399" r="5" fill="#95a8b3"/>
+  <text x="883" y="404" class="text normal">Analytics marker</text>
+  <text x="1058" y="404" class="muted small strong">NOT TESTED</text>
+  <rect class="panel" x="203" y="465" width="972" height="257" rx="13"/>
+  <text x="223" y="496" class="text mid strong">Review evidence</text>
+  <text x="223" y="516" class="muted small">A sample of how separate observations are presented to product owners and developers</text>
+  <rect x="223" y="535" width="444" height="155" rx="10" fill="#101a23" stroke="#344954"/>
+  <text x="242" y="562" class="accent small strong">PRODUCT OWNER VIEW</text>
+  <text x="242" y="589" class="text normal strong">Release-readiness summary</text>
+  <text x="242" y="614" class="muted small">Code findings and stage observations remain</text>
+  <text x="242" y="632" class="muted small">distinct; unavailable checks stay visible.</text>
+  <rect x="242" y="652" width="191" height="23" rx="11" fill="#373027"/>
+  <text x="257" y="668" class="warm small strong">Comments to review</text>
+  <rect x="686" y="535" width="469" height="155" rx="10" fill="#101a23" stroke="#344954"/>
+  <text x="706" y="562" class="accent small strong">DEVELOPER VIEW</text>
+  <text x="706" y="589" class="text normal strong">Actionable findings &amp; checks</text>
+  <text x="706" y="614" class="muted small">Framework-aware rules · GitHub check runs</text>
+  <text x="706" y="632" class="muted small">Playwright browser signals · optional AI review</text>
+  <rect x="706" y="652" width="164" height="23" rx="11" fill="#233823"/>
+  <text x="721" y="668" class="accent small strong">Evidence first</text>
+</svg>
