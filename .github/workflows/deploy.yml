@@ -21,6 +21,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify GitHub Pages publishing source
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          build_type="$(gh api "repos/${GH_REPO}/pages" --jq '.build_type // "unknown"')"
+          if [ "$build_type" != "workflow" ]; then
+            echo "::error::GitHub Pages is configured as '$build_type'. In Settings > Pages > Build and deployment, set Source to 'GitHub Actions'."
+            exit 1
+          fi
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
