@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "About | Ceci Garcia",
-  description: "About Ceci Garcia: software engineering, enterprise platform modernisation, technical delivery leadership, release governance and applied AI.",
+  description: "About Ceci Garcia: technical delivery leadership, software engineering, enterprise platform modernisation, release governance, applied AI and mentoring.",
 };
 
 const strengths = [
@@ -57,7 +57,7 @@ export default function AboutPage() {
             <p className="cv-eyebrow">Profile</p>
             <h1 id="about-heading">I connect engineering depth with delivery leadership.</h1>
             <p className="cv-lede">
-              I am a software engineering and technical delivery leader with more than 14 years of experience developing, integrating and modernising digital platforms. My career has moved from hands-on software development into broader technical leadership, while keeping engineering judgement, practical problem-solving and continuous improvement at the core of how I work.
+              I am a technical delivery and software engineering leader with more than 14 years of experience developing, integrating and modernising digital platforms. My career has progressed from hands-on software development to enterprise technical leadership, while keeping engineering judgement, practical problem-solving and continuous improvement at the core of how I work.
             </p>
           </div>
           <aside className="cv-aside" aria-label="Current focus">
@@ -65,7 +65,34 @@ export default function AboutPage() {
             <dl className="cv-fact"><dt>Organisation</dt><dd>University of Oxford IT Services</dd></dl>
             <dl className="cv-fact"><dt>Role</dt><dd>Technical Delivery Team Leader</dd></dl>
             <dl className="cv-fact"><dt>Team</dt><dd>Six software developers · three QA specialists · four direct reports</dd></dl>
+            <dl className="cv-fact"><dt>Delivery remit</dt><dd>Enterprise web platforms · software delivery · release governance</dd></dl>
           </aside>
+        </section>
+
+        <section className="cv-section cv-shell" aria-labelledby="journey-heading">
+          <div className="cv-section-layout">
+            <span className="cv-section-label">Career journey</span>
+            <div>
+              <h2 className="cv-section-title" id="journey-heading">From hands-on developer to technical delivery leader.</h2>
+              <div className="cv-story-list">
+                <article className="cv-story">
+                  <p className="cv-story-meta">Software development · Switzerland</p>
+                  <h3>Built a broad engineering foundation across different products and clients.</h3>
+                  <p>Worked in software development roles at TATA Interactive Systems, iMusician Digital and ANCYCH, building e-learning applications, digital music platform functionality and bespoke client solutions using technologies including C#/.NET, PHP, JavaScript and MySQL.</p>
+                </article>
+                <article className="cv-story">
+                  <p className="cv-story-meta">Saïd Business School · University of Oxford · 2015–2025</p>
+                  <h3>Progressed from Software Developer to Senior Developer across a decade of platform change.</h3>
+                  <p>Led Drupal development, enterprise platform modernisation, systems integration, identity and access work, release governance and major migrations. Individual recognition included Saïd Business School awards in 2015, 2017 and 2018, followed by further individual recognition in 2023/24.</p>
+                </article>
+                <article className="cv-story">
+                  <p className="cv-story-meta">University of Oxford IT Services · 2025–present</p>
+                  <h3>Now lead technical delivery across enterprise platforms and engineering workstreams.</h3>
+                  <p>Lead delivery for six software developers and three QA specialists, with four direct reports, combining Scrum leadership, backlog and capacity planning, release management, technical assurance and continuous improvement across live services and platform change.</p>
+                </article>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="cv-section cv-shell" aria-labelledby="approach-heading">
@@ -98,7 +125,7 @@ export default function AboutPage() {
                 <article className="cv-story">
                   <p className="cv-story-meta">University of Oxford · Technical Delivery</p>
                   <h3>Made delivery and release decisions easier to see and act on.</h3>
-                  <p>Introduced clearer sprint goals, capacity-based planning, consolidated Azure DevOps backlogs, visual delivery reporting and documented release plans. I also chair cross-functional go/no-go discussions with product, QA, technical and communications leads to review blockers and agree readiness.</p>
+                  <p>Introduced clearer sprint goals, capacity-based planning, consolidated Azure DevOps backlogs, visual delivery reporting and documented release plans. Improvements to sprint planning, delivery reporting and release management contributed to approximately 30% higher delivery velocity and 40% fewer post-release incidents.</p>
                 </article>
                 <article className="cv-story">
                   <p className="cv-story-meta">University of Oxford · Applied AI</p>
@@ -120,6 +147,32 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="cv-section cv-shell" aria-labelledby="beyond-heading">
+          <div className="cv-section-layout">
+            <span className="cv-section-label">Beyond the day job</span>
+            <div>
+              <h2 className="cv-section-title" id="beyond-heading">Learning, governance and helping other technologists grow.</h2>
+              <div className="cv-page-grid">
+                <article className="cv-page-card">
+                  <span className="cv-page-card-number">Doctoral study</span>
+                  <h3>Institutional Management &amp; Innovation</h3>
+                  <p>Completed the academic requirements for a doctorate at IEU in August 2026, with the formal award pending. My doctoral project developed a functional AI-agent-based service desk prototype.</p>
+                </article>
+                <article className="cv-page-card">
+                  <span className="cv-page-card-number">Trustee · 2025–present</span>
+                  <h3>Reading Community Learning Centre</h3>
+                  <p>Contribute to governance and strategic planning, including budgets, funding plans, organisational risks, policies and progress against objectives.</p>
+                </article>
+                <article className="cv-page-card">
+                  <span className="cv-page-card-number">Mentor · 2023–present</span>
+                  <h3>Rewriting the Code</h3>
+                  <p>Provide one-to-one mentoring on programming and software development, offering practical coding advice and technical guidance.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="cv-section cv-shell" aria-labelledby="capabilities-heading">
           <div className="cv-section-layout">
             <span className="cv-section-label">Core expertise</span>
@@ -134,6 +187,7 @@ export default function AboutPage() {
               <div className="cv-actions">
                 <Link className="cv-text-link" href="/experience/">View career experience ↗</Link>
                 <Link className="cv-text-link" href="/projects/">Explore selected work ↗</Link>
+                <Link className="cv-text-link" href="/credentials/">Review credentials ↗</Link>
               </div>
             </div>
           </div>
