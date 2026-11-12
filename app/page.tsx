@@ -1,49 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
+import { siteNavigation } from "./components/site-navigation";
 
 export const metadata: Metadata = {
   title: "Ceci Garcia | Technical Delivery & Software Engineering Leader",
   description: "Ceci Garcia's professional portfolio: technical delivery leadership, software engineering, enterprise platform modernisation, release governance and applied AI.",
 };
-
-const destinations = [
-  {
-    number: "01",
-    title: "Profile",
-    description: "How I approach software engineering leadership, technical decision-making and continuous improvement.",
-    href: "/about/",
-    detail: "About me",
-  },
-  {
-    number: "02",
-    title: "Experience",
-    description: "My career journey, leadership scope and selected engineering and delivery achievements.",
-    href: "/experience/",
-    detail: "Career & impact",
-  },
-  {
-    number: "03",
-    title: "Selected Work",
-    description: "Technical projects spanning delivery intelligence, quality engineering, security and practical applied AI.",
-    href: "/projects/",
-    detail: "Project case studies",
-  },
-  {
-    number: "04",
-    title: "Credentials",
-    description: "Doctoral study, professional certifications and continuous development across engineering, architecture and leadership.",
-    href: "/credentials/",
-    detail: "Education & certifications",
-  },
-  {
-    number: "05",
-    title: "Contact",
-    description: "Get in touch to discuss software engineering, technical delivery or professional collaboration.",
-    href: "/contact/",
-    detail: "Get in touch",
-  },
-];
 
 export default function Home() {
   return (
@@ -109,10 +72,10 @@ export default function Home() {
               <h2 className="cv-section-title" id="pages-heading">Engineering depth. Delivery leadership. Practical innovation.</h2>
               <p className="cv-section-intro">Explore the experience, projects and credentials behind my work—from enterprise platform modernisation and release governance to independent engineering tools and AI-assisted workflows.</p>
               <div className="cv-page-grid">
-                {destinations.map((destination) => (
+                {siteNavigation.map((destination, index) => (
                   <Link className="cv-page-card" href={destination.href} key={destination.href}>
-                    <span className="cv-page-card-number">{destination.number} / {destination.detail}</span>
-                    <h3>{destination.title}</h3>
+                    <span className="cv-page-card-number">{String(index + 1).padStart(2, "0")} / {destination.detail}</span>
+                    <h3>{destination.label}</h3>
                     <p>{destination.description}</p>
                     <span className="cv-page-card-arrow" aria-hidden="true">Explore ↗</span>
                   </Link>

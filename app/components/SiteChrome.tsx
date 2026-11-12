@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRef, useState } from "react";
+import type { KeyboardEvent } from "react";
+import { siteNavigation } from "./site-navigation";
 
-const navigation = [
-  { label: "Profile", href: "/about/" },
-  { label: "Experience", href: "/experience/" },
-  { label: "How I Deliver", href: "/how-i-deliver/" },
-  { label: "Selected Work", href: "/projects/" },
-  { label: "Credentials", href: "/credentials/" },
-  { label: "Contact", href: "/contact/" },
-];
+function activeRoute(pathname: string, href: string) {
+  const route = href.replace(/\/$/, "");
+  return pathname === route || (route === "/projects" && pathname.startsWith("/projects/"));
+}
 
 export function ArrowUpRight() {
   return (
@@ -22,21 +21,61 @@ export function ArrowUpRight() {
 
 export function SiteHeader() {
   const pathname = usePathname().replace(/\/$/, "") || "/";
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+
+  const links = (onNavigate?: () => void) => siteNavigation.map(({ label, href }) => (
+    <Link
+      href={href}
+      key={href}
+      aria-current={activeRoute(pathname, href) ? "page" : undefined}
+      onClick={onNavigate}
+    >
+      {label}
+    </Link>
+  ));
+
+  function handleMenuKeyDown(event: KeyboardEvent<HTMLElement>) {
+    if (event.key === "Escape") {
+      setMenuOpen(false);
+      menuButton.current?.focus();
+    }
+  }
 
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="site-header">
-        <Link className="brand" href="/" aria-label="Ceci Garcia — home">
+        <Link className="brand" href="/" aria-label="Ceci Garcia — home" onClick={() => setMenuOpen(false)}>
           <span>CG</span><b>Ceci Garcia</b>
         </Link>
-        <nav aria-label="Main navigation">
-          {navigation.map(({ label, href }) => {
-            const route = href.replace(/\/$/, "");
-            const active = pathname === route || (route === "/projects" && pathname.startsWith("/projects/"));
-            return <Link href={href} key={href} aria-current={active ? "page" : undefined}>{label}</Link>;
-          })}
+        <nav className="site-desktop-nav" aria-label="Main navigation">
+          {links()}
         </nav>
+        <button
+          ref={menuButton}
+          type="button"
+          className="site-menu-toggle"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls={menuOpen ? "site-mobile-navigation" : undefined}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span>{menuOpen ? "Close" : "Menu"}</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            {menuOpen ? <path d="M5 5l14 14M19 5 5 19" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+          </svg>
+        </button>
+        {menuOpen && (
+          <nav
+            id="site-mobile-navigation"
+            className="site-mobile-nav"
+            aria-label="Mobile navigation"
+            onKeyDown={handleMenuKeyDown}
+          >
+            {links(() => setMenuOpen(false))}
+          </nav>
+        )}
       </header>
     </>
   );
