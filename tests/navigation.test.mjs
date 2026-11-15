@@ -33,10 +33,10 @@ test("header and homepage use one shared navigation source", () => {
   assert.match(read("app/page.tsx"), /siteNavigation\.map\(/);
 });
 
-test("every top-level navigation URL has a Next.js page", () => {
+test("every primary navigation URL has a Next.js page", () => {
   const source = read("app/components/site-navigation.ts");
   const hrefs = [...source.matchAll(/href:\s*"(\/[^"\n]+\/)"/g)].map((match) => match[1]);
-  assert.equal(hrefs.length, 6);
+  assert.equal(hrefs.length, 5);
   assert.equal(new Set(hrefs).size, hrefs.length);
   for (const href of hrefs) {
     const route = join(app, href.replace(/^\//, ""), "page.tsx");

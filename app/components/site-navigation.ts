@@ -1,22 +1,10 @@
 /** Shared route definitions for the site header and homepage. */
 export const siteNavigation = [
   {
-    label: "Profile",
+    label: "About",
     href: "/about/",
-    detail: "About me",
-    description: "How I approach software engineering leadership, technical decision-making and continuous improvement.",
-  },
-  {
-    label: "Experience",
-    href: "/experience/",
-    detail: "Career & impact",
-    description: "My career journey, leadership scope and selected engineering and delivery achievements.",
-  },
-  {
-    label: "How I Deliver",
-    href: "/how-i-deliver/",
-    detail: "Delivery approach",
-    description: "How Scrum, Kanban and CI/CD work together to bring focus, flow and reliable software releases.",
+    detail: "Professional profile",
+    description: "My professional story, what I care about and how I approach technical leadership.",
   },
   {
     label: "Selected Work",
@@ -25,10 +13,16 @@ export const siteNavigation = [
     description: "Technical projects spanning delivery intelligence, quality engineering, security and practical applied AI.",
   },
   {
+    label: "How I Deliver",
+    href: "/how-i-deliver/",
+    detail: "Delivery approach",
+    description: "How I turn technical change into clear, sustainable and reliable delivery.",
+  },
+  {
     label: "Credentials",
     href: "/credentials/",
     detail: "Education & certifications",
-    description: "Doctoral study, professional certifications and continuous development across engineering, architecture and leadership.",
+    description: "A concise view of formal study, certifications and ongoing professional development.",
   },
   {
     label: "Contact",
