@@ -41,6 +41,12 @@ const projects = [
     href: "/projects/cg-qa/",
   },
   {
+    title: "GliptoDev",
+    detail: "Applied AI · API integration",
+    description: "A Custom GPT and Actions workflow that turns requirements into structured, reviewable epic proposals.",
+    href: "/projects/gliptodev/",
+  },
+  {
     title: "AI Delivery Triage Assistant",
     detail: "Applied AI",
     description: "A team-facing assistant for navigating delivery work, finding related items and retrieving operational knowledge.",
