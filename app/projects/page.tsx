@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "Selected Work | Ceci Garcia",
-  description: "Case studies in software security, quality engineering and practical AI-assisted delivery triage.",
+  description: "Software engineering case studies in security, quality assurance, AI-assisted epic planning and delivery triage.",
 };
 
 const projects = [
@@ -25,6 +25,14 @@ const projects = [
     tags: ["GitHub compare API", "Framework-aware checks", "Playwright", "Optional AI"],
   },
   {
+    href: "/projects/gliptodev/",
+    image: "/images/gliptodev-epic-actions.svg",
+    eyebrow: "AI EPIC PLANNING · API ACTIONS",
+    title: "GliptoDev",
+    summary: "A custom GPT workflow for shaping software requirements into structured development epics, using OpenAPI Actions and an API integration boundary.",
+    tags: ["Custom GPT", "OpenAPI Actions", "Structured epics", "API integration"],
+  },
+  {
     href: "/projects/ai-delivery-triage/",
     image: "/images/ai-delivery-triage-demo.svg",
     eyebrow: "DELIVERY OPERATIONS · APPLIED AI",
@@ -42,7 +50,7 @@ export default function ProjectsPage() {
       <section className="section-shell mp-page-hero">
         <span className="section-kicker">SELECTED WORK</span>
         <h1>Software engineering &amp; applied AI.</h1>
-        <p>Selected technical projects covering security, quality engineering and responsible use of AI. Each case study explains the challenge, approach and design choices. Interface previews use illustrative, non-production data.</p>
+        <p>Selected technical projects covering software security, quality engineering, API-integrated AI and delivery workflows. Each case study explains the challenge, approach and design choices. Interface previews use illustrative, non-production data.</p>
       </section>
       <section className="section-shell mp-project-list">
         {projects.map((project, index) => (
