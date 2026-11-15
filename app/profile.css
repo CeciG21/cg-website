@@ -149,3 +149,15 @@ main{overflow:visible}
 @media(max-width:900px){.mp-benefit-grid.triage-benefit-grid{grid-template-columns:1fr}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* GliptoDev case-study API example; preserves the established editorial palette. */
+.gliptodev-schema{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px;padding:72px 0 100px;border-top:1px solid var(--cv-rule)}
+.gliptodev-schema h2{margin:14px 0 20px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(33px,3.6vw,48px);font-weight:400;line-height:1.14;letter-spacing:-.035em;color:var(--cv-ink)}
+.gliptodev-schema p{max-width:500px;margin:0;color:var(--cv-muted);font-size:14px;line-height:1.8}
+.gliptodev-schema-panel{min-width:0;overflow:hidden;border:1px solid var(--cv-rule);border-radius:10px;background:#132734}
+.gliptodev-schema-heading{display:block;padding:15px 21px;border-bottom:1px solid #345366;color:#c8e1eb;font-size:12px;font-weight:650;letter-spacing:.04em}
+.gliptodev-schema pre{margin:0;padding:22px;color:#e1eef2;font-size:12px;line-height:1.7;overflow-x:auto;tab-size:2}
+.gliptodev-schema code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+@media(max-width:900px){.gliptodev-schema{grid-template-columns:1fr;gap:30px}}
+@media(max-width:640px){.gliptodev-schema{padding:62px 0 78px}.gliptodev-schema pre{padding:16px;font-size:11px}}
